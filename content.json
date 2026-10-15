@@ -1,0 +1,1531 @@
+{
+  "_leeme": "Fuente de verdad del sitio. Todo texto va en pares es/en. Editá acá y corré: python3 build.py",
+  "site": {
+    "name": "Parque Industrial Vaca Muerta",
+    "short": "PIVM",
+    "url": "https://vacamuertaindustria.com",
+    "indexable": false,
+    "year": "2026",
+    "phone_display": "+54 9 3413 16-5100",
+    "phone_e164": "5493413165100",
+    "email": "vmindustria_info@somoszlt.com",
+    "address": {
+      "es": "Ruta 17, km 5 · Añelo, Neuquén, Argentina",
+      "en": "Route 17, km 5 · Añelo, Neuquén, Argentina"
+    },
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Parque+Industrial+Vaca+Muerta+A%C3%B1elo+Neuqu%C3%A9n",
+    "brochure": {
+      "es": "brochures/Brochure_Digital_PIVM_2026.pdf",
+      "en": "brochures/Brochure_Digital_PIVM_2026.pdf",
+      "en_note": "(en español)",
+      "size": "9,6 MB"
+    },
+    "brochure_service_center": {
+      "enabled": false,
+      "file": "brochures/PIVM_Zona_Comercial.pdf (no incluido)",
+      "_nota": "Desactivado: la versión de dic-2025 tiene el teléfono viejo (341 261-8540). Activar cuando haya versión nueva."
+    },
+    "whatsapp_msg": {
+      "es": "Hola, quiero recibir información sobre el Parque Industrial Vaca Muerta.",
+      "en": "Hi, I'd like to receive information about Parque Industrial Vaca Muerta."
+    },
+    "social": [
+      {
+        "id": "instagram",
+        "label": "Instagram",
+        "url": "https://www.instagram.com/somos.zlt/"
+      },
+      {
+        "id": "linkedin",
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/company/somoszlt"
+      },
+      {
+        "id": "youtube",
+        "label": "YouTube",
+        "url": "https://www.youtube.com/@somoszlt"
+      }
+    ],
+    "tour360": {
+      "id": "7HcZL",
+      "es": "Recorrido 360° · Parque Industrial Vaca Muerta",
+      "en": "360° tour · Parque Industrial Vaca Muerta",
+      "_fuente": "Kuula, colección 7HcZL (la misma que usa ZLT-WEB-V2)"
+    },
+    "videos": {
+      "oficial": {
+        "id": "pIw2ySdftVc",
+        "es": "Video oficial",
+        "en": "Official video"
+      },
+      "avance": {
+        "id": "jvSD8PtbSUk",
+        "es": "Avance de obra",
+        "en": "Construction progress"
+      }
+    },
+    "hero_video": {
+      "desktop": "videos/pivm-hero-16x9.mp4",
+      "desktop_poster": "videos/pivm-hero-16x9.jpg",
+      "mobile": "videos/pivm-hero-9x16.mp4",
+      "mobile_poster": "videos/pivm-hero-9x16.jpg",
+      "_fuente": "01-ZLT Parque Industrial (septiembre 2026) — Comunicación y Marketing/Fotos_y_Videos_Avance_De_Obra/2026/09"
+    },
+    "legal": {
+      "es": "La información, imágenes, planos y equipamiento presentados en este sitio son ilustrativos y no constituyen oferta contractual. Las especificaciones, medidas y descripciones pueden modificarse sin previo aviso. Las imágenes, videos y renders son representaciones artísticas.",
+      "en": "The information, images, plans and equipment shown on this site are illustrative and do not constitute a contractual offer. Specifications, measurements and descriptions may change without notice. Images, videos and renders are artistic representations."
+    }
+  },
+  "nav": [
+    {
+      "href": "index.html#parque",
+      "page": "home",
+      "es": "El parque",
+      "en": "The park"
+    },
+    {
+      "href": "empresas/",
+      "page": "empresas",
+      "es": "Empresas",
+      "en": "Companies"
+    },
+    {
+      "href": "inversores/",
+      "page": "inversores",
+      "es": "Inversores",
+      "en": "Investors"
+    },
+    {
+      "href": "index.html#proxima-etapa",
+      "page": "home",
+      "es": "Próxima etapa",
+      "en": "Next stage"
+    },
+    {
+      "href": "#contacto",
+      "page": "",
+      "es": "Contacto",
+      "en": "Contact"
+    }
+  ],
+  "stats": [
+    {
+      "num": "34",
+      "unit": "ha",
+      "es": "Superficie total",
+      "en": "Total area"
+    },
+    {
+      "num": "103",
+      "unit": "",
+      "es": "Lotes industriales",
+      "en": "Industrial lots"
+    },
+    {
+      "num": "1.350",
+      "num_en": "1,350",
+      "unit": "m²",
+      "pre": {
+        "es": "desde",
+        "en": "from"
+      },
+      "es": "Hasta 4.350 m² por lote",
+      "en": "Up to 4,350 m² per lot"
+    },
+    {
+      "num": "24",
+      "unit": "h",
+      "es": "Seguridad privada",
+      "en": "Private security"
+    }
+  ],
+  "seals": [
+    {
+      "es": "Escriturables",
+      "en": "Title deed ready"
+    },
+    {
+      "es": "Posesión inmediata",
+      "en": "Immediate possession"
+    },
+    {
+      "es": "Infraestructura completa",
+      "en": "Full infrastructure"
+    },
+    {
+      "es": "Naves llave en mano",
+      "en": "Turnkey warehouses"
+    }
+  ],
+  "drivers": [
+    {
+      "es": "Lotes escriturables",
+      "en": "Lots with title deed",
+      "d_es": "Comprás un activo propio, con escritura y posesión inmediata.",
+      "d_en": "You buy your own asset, with title deed and immediate possession."
+    },
+    {
+      "es": "Infraestructura completa",
+      "en": "Full infrastructure",
+      "d_es": "Energía, agua, cloacas, fibra óptica y calles asfaltadas hasta cada lote.",
+      "d_en": "Power, water, sewage, fiber optics and paved streets to every lot."
+    },
+    {
+      "es": "Terrenos flexibles",
+      "en": "Flexible plots",
+      "d_es": "Lotes de 1.350 a 4.350 m² que se adaptan a cada operación.",
+      "d_en": "Lots from 1,350 to 4,350 m² that adapt to each operation."
+    },
+    {
+      "es": "Ubicación estratégica",
+      "en": "Strategic location",
+      "d_es": "En Añelo, el corazón operativo de Vaca Muerta, sobre la Ruta 17.",
+      "d_en": "In Añelo, the operational heart of Vaca Muerta, on Route 17."
+    },
+    {
+      "es": "Naves llave en mano",
+      "en": "Turnkey warehouses",
+      "d_es": "ZLT cotiza, diseña y construye tu nave a medida.",
+      "d_en": "ZLT quotes, designs and builds your warehouse to measure."
+    }
+  ],
+  "services": [
+    {
+      "icon": "electricidad",
+      "es": "Red eléctrica",
+      "en": "Power grid",
+      "d_es": "30 kW instalados por lote, trifásica en baja tensión.",
+      "d_en": "30 kW installed per lot, three-phase low voltage."
+    },
+    {
+      "icon": "agua",
+      "es": "Red de agua",
+      "en": "Water network",
+      "d_es": "Red mallada, 2 tanques de 160.000 l y presión de 2,5 kg/cm².",
+      "d_en": "Looped network, 2 tanks totalling 160,000 l and 2.5 kg/cm² pressure."
+    },
+    {
+      "icon": "cloacas",
+      "es": "Red de cloacas",
+      "en": "Sewage network",
+      "d_es": "Acometida a cada lote y planta de tratamiento de 150 m³/día.",
+      "d_en": "Connection to every lot and a 150 m³/day treatment plant."
+    },
+    {
+      "icon": "fibra",
+      "es": "Fibra óptica",
+      "en": "Fiber optics",
+      "d_es": "Tendido de fibra óptica hasta cada lote.",
+      "d_en": "Fiber optic cabling to every lot."
+    },
+    {
+      "icon": "asfalto",
+      "es": "Calles asfaltadas",
+      "en": "Paved streets",
+      "d_es": "Circulación interna pavimentada para tránsito pesado.",
+      "d_en": "Paved internal roads for heavy traffic."
+    },
+    {
+      "icon": "cordon",
+      "es": "Cordón cuneta",
+      "en": "Curb and gutter",
+      "d_es": "Escurrimiento pluvial ordenado en todo el predio.",
+      "d_en": "Orderly stormwater drainage across the site."
+    },
+    {
+      "icon": "alumbrado",
+      "es": "Alumbrado público",
+      "en": "Street lighting",
+      "d_es": "Iluminación en calles y accesos.",
+      "d_en": "Lighting on streets and access points."
+    },
+    {
+      "icon": "seguridad",
+      "es": "Seguridad privada 24 h",
+      "en": "24 h private security",
+      "d_es": "Pórtico de acceso y vigilancia las 24 horas.",
+      "d_en": "Access gateway and round-the-clock surveillance."
+    }
+  ],
+  "tech": [
+    {
+      "num": "30",
+      "unit": "kW",
+      "es": "Potencia instalada por lote, trifásica en baja tensión.",
+      "en": "Installed power per lot, three-phase low voltage."
+    },
+    {
+      "num": "160.000",
+      "num_en": "160,000",
+      "unit": "l",
+      "es": "Reserva de agua en dos tanques, con bomba de extracción a 180 m.",
+      "en": "Water reserve in two tanks, with an extraction pump at 180 m."
+    },
+    {
+      "num": "2,5",
+      "num_en": "2.5",
+      "unit": "kg/cm²",
+      "es": "Presión media de servicio en red mallada, con bombas presurizadoras.",
+      "en": "Average service pressure on a looped network with booster pumps."
+    },
+    {
+      "num": "150",
+      "unit": "m³/día",
+      "unit_en": "m³/day",
+      "es": "Planta de tratamiento cloacal; el agua tratada riega la forestación.",
+      "en": "Sewage treatment plant; treated water irrigates the landscaping."
+    },
+    {
+      "num": "2.250",
+      "num_en": "2,250",
+      "unit": "l/día",
+      "unit_en": "l/day",
+      "es": "Capacidad cloacal por lote, con acometida domiciliaria.",
+      "en": "Sewage capacity per lot, with individual connection."
+    },
+    {
+      "num": "520",
+      "unit": "",
+      "es": "Especies forestales en el perímetro del parque, más 2.000 m² de césped.",
+      "en": "Trees along the park perimeter, plus 2,000 m² of lawn."
+    }
+  ],
+  "urban": [
+    {
+      "es": "Parcelamiento",
+      "en": "Subdivision",
+      "items_es": [
+        "Frente mínimo de 30 m",
+        "Superficie mínima de 1.000 m²"
+      ],
+      "items_en": [
+        "Minimum frontage of 30 m",
+        "Minimum area of 1,000 m²"
+      ]
+    },
+    {
+      "es": "Construcción",
+      "en": "Building",
+      "items_es": [
+        "FOS: 0,70",
+        "FOT: 0,85"
+      ],
+      "items_en": [
+        "Site coverage (FOS): 0.70",
+        "Floor area ratio (FOT): 0.85"
+      ]
+    },
+    {
+      "es": "Retiros",
+      "en": "Setbacks",
+      "items_es": [
+        "Frente: 5 m · Fondo: 1 m",
+        "Lateral mínimo: 2 m"
+      ],
+      "items_en": [
+        "Front: 5 m · Rear: 1 m",
+        "Minimum side: 2 m"
+      ]
+    },
+    {
+      "es": "Usos permitidos",
+      "en": "Permitted uses",
+      "items_es": [
+        "Industriales",
+        "Comercial minorista y mayorista, con y sin depósito",
+        "Servicios"
+      ],
+      "items_en": [
+        "Industrial",
+        "Retail and wholesale, with or without storage",
+        "Services"
+      ]
+    }
+  ],
+  "distances": [
+    {
+      "city": "Neuquén",
+      "km": 102,
+      "lat": -38.951,
+      "lon": -68.059,
+      "es": "Capital provincial y aeropuerto",
+      "en": "Provincial capital and airport"
+    },
+    {
+      "city": "Cutral Có",
+      "km": 84,
+      "lat": -38.936,
+      "lon": -69.23,
+      "es": "Nodo petrolero del oeste",
+      "en": "Western oil hub"
+    },
+    {
+      "city": "Rincón de los Sauces",
+      "km": 132,
+      "lat": -37.39,
+      "lon": -68.927,
+      "es": "Norte de la cuenca",
+      "en": "Northern basin"
+    }
+  ],
+  "anelo": {
+    "lat": -38.354,
+    "lon": -68.788
+  },
+  "partners": [
+    {
+      "id": "soldini-stock",
+      "name": "Soldini Stock"
+    },
+    {
+      "id": "avalian",
+      "name": "Avalian"
+    },
+    {
+      "id": "las-taperitas",
+      "name": "Las Taperitas"
+    },
+    {
+      "id": "grupo-flecha",
+      "name": "Grupo Flecha"
+    },
+    {
+      "id": "la-segunda",
+      "name": "La Segunda"
+    },
+    {
+      "id": "mbc",
+      "name": "MBC"
+    },
+    {
+      "id": "qala",
+      "name": "Qala"
+    }
+  ],
+  "gallery_parque": [
+    {
+      "src": "fotos/parque/aerea-avenida",
+      "es": "Avenida central, lotes y pórtico de acceso",
+      "en": "Main avenue, lots and access gateway"
+    },
+    {
+      "src": "fotos/parque/portico-frente",
+      "es": "Pórtico de acceso",
+      "en": "Access gateway"
+    },
+    {
+      "src": "fotos/parque/aerea-lotes",
+      "es": "Lotes con calles asfaltadas",
+      "en": "Lots with paved streets"
+    },
+    {
+      "src": "fotos/parque/portico-calle",
+      "es": "Ingreso desde la ruta",
+      "en": "Entrance from the road"
+    },
+    {
+      "src": "fotos/parque/aerea-anelo",
+      "es": "El parque y Añelo de fondo",
+      "en": "The park with Añelo in the background"
+    },
+    {
+      "src": "fotos/parque/portico-lateral",
+      "es": "Pórtico y cartel institucional",
+      "en": "Gateway and park sign"
+    },
+    {
+      "src": "fotos/parque/aerea-portico",
+      "es": "Vista aérea del ingreso",
+      "en": "Aerial view of the entrance"
+    },
+    {
+      "src": "fotos/parque/aerea-horizonte",
+      "es": "El parque en la meseta neuquina",
+      "en": "The park on the Neuquén plateau"
+    }
+  ],
+  "press": [
+    {
+      "outlet": "Aire de Santa Fe",
+      "date": "2026-09-17",
+      "title": "ZLT y Vaca Muerta: el desafío de llevar a las pymes industriales del centro del país al nuevo polo energético",
+      "url": "https://www.airedesantafe.com.ar/negocios-y-empresas/zlt-y-vaca-muerta-el-desafio-llevar-las-pymes-industriales-del-centro-del-pais-al-nuevo-polo-energetico-n670386",
+      "img": "3984683167584632a050130d82bd61c0~mv2.png|Foto%20Web%20Nota%20Clipping.png"
+    },
+    {
+      "outlet": "Punto Biz",
+      "date": "2026-06-30",
+      "title": "ZLT crece en Añelo con viviendas y parque industrial",
+      "url": "https://puntobiz.com.ar/negocios/zlt-crece-en-anelo-con-viviendas-y-parque-industrial-2026630600",
+      "img": "47f1013bfa22494590c436a4fa1a2f8e~mv2.jpg|Parque%20Industrial%20foto.jpg"
+    },
+    {
+      "outlet": "Punto Biz",
+      "date": "2026-03-20",
+      "title": "ZLT y socios presentaron los avances del Parque Industrial Vaca Muerta",
+      "url": "https://puntobiz.com.ar/negocios/zlt-y-socios-presentaron-los-avances-del-parque-industrial-vaca-muerta-202632010500",
+      "img": "248a27014d0d4bae9be927af377e7530~mv2.png|imagen%20(1).png"
+    },
+    {
+      "outlet": "Ámbito",
+      "date": "2026-03-19",
+      "title": "Vaca Muerta suma infraestructura clave: parque industrial en Añelo, red de gas y formación técnica para sostener el crecimiento",
+      "url": "https://www.ambito.com/energia/vaca-muerta-suma-infraestructura-clave-parque-industrial-anelo-red-gas-y-formacion-tecnica-sostener-el-crecimiento-n6257706",
+      "img": "a95a9300805242b3974a4c6858aa2407~mv2.jpg|DJI_20260316174942_0030_D.jpg"
+    },
+    {
+      "outlet": "Ser Industria",
+      "date": "2026-03-18",
+      "title": "Inauguran un parque industrial clave para Vaca Muerta en Añelo",
+      "url": "https://www.serindustria.com.ar/inauguran-un-parque-industrial-clave-para-vaca-muerta-en-anelo/",
+      "img": "f270ff5e8e0f42e0ac605e0db42f61eb~mv2.jpg|Dise%C3%B1o%20sin%20t%C3%ADtulo%20(1).jpg"
+    },
+    {
+      "outlet": "Info Energía",
+      "date": "2026-03-17",
+      "title": "Inauguran el Parque Industrial Vaca Muerta en Añelo para fortalecer la cadena de proveedores",
+      "url": "https://infoenergia.info/empresas-y-energia/inauguran-el-parque-industrial-vaca-muerta-en-anelo-para-fortalecer-la-cadena-de-proveedores",
+      "img": "4a133ce6602e42fbb9b34dff1f635d83~mv2.jpg|_DSC4205.jpg"
+    },
+    {
+      "outlet": "Diario Río Negro",
+      "date": "2026-03-16",
+      "title": "Inauguran el Parque Industrial Vaca Muerta: un puente entre empresas proveedoras y el desarrollo energético",
+      "url": "https://www.rionegro.com.ar/energia/inauguran-el-parque-industrial-vaca-muerta-un-puente-entre-empresas-proveedoras-y-el-desarrollo-energetico-4503598/",
+      "img": "2ab3bf8de2824863acd3ab426270202e~mv2.jpg|_DSC4332.jpg"
+    },
+    {
+      "outlet": "MDZ Online",
+      "date": "2026-03-16",
+      "title": "Parque Industrial Vaca Muerta: cómo es el proyecto y qué beneficios tiene para la cadena de valor",
+      "url": "https://www.mdzol.com/parque-industrial-vaca-muerta-como-es-el-proyecto-y-que-beneficios-tiene-la-cadena-valor-n1475945",
+      "img": "5312736ec68a407889b5516fa22a58bd~mv2.jpg|DJI_20260316174426_0025_D.jpg"
+    },
+    {
+      "outlet": "Neuquén al Instante",
+      "date": "2025-12-22",
+      "title": "ZLT impulsa el Parque Industrial Vaca Muerta junto a La Segunda Seguros y Avalian como aliados estratégicos",
+      "url": "https://www.neuquenalinstante.com.ar/noticias/2025/12/22/123583-zlt-impulsa-el-parque-industrial-vaca-muerta-junto-a-la-segunda-seguros-y-avalian-como-aliados-estrategicos",
+      "img": "3436c9a5f58c4a929ec37ff38f2da67e~mv2.jpg|03.jpg"
+    },
+    {
+      "outlet": "Punto Biz",
+      "date": "2025-12-22",
+      "title": "En Vaca Muerta, avanza un parque industrial con el sello de empresas rosarinas",
+      "url": "https://puntobiz.com.ar/negocios/en-vaca-muerta-avanza-un-parque-industrial-con-el-sello-de-empresas-rosarinas--2025122214490",
+      "img": "73a40c7f79d649ff9460ad3ce2f25db3~mv2.jpg|05.jpg"
+    },
+    {
+      "outlet": "In Neuquén",
+      "date": "2025-12-22",
+      "title": "ZLT impulsa el Parque Industrial Vaca Muerta junto a La Segunda Seguros y Avalian como aliados estratégicos",
+      "url": "https://inneuquen.info/enfoque/zlt-impulsa-el-parque-industrial-vaca-muerta-junto-a-la-segunda-seguros-y-avalian-como-aliados-estrategicos",
+      "img": "97dbdf49f3834d15a2dab3b3fd67c12e~mv2.jpg|ZLT_20251216_F0112.JPG"
+    },
+    {
+      "outlet": "Agro & Economía",
+      "date": "2025-12-22",
+      "title": "Junto a aliados estratégicos, ZLT desarrolla el Parque Industrial Vaca Muerta",
+      "url": "https://www.agroyeconomia.com/junto-a-aliados-estrategicos-zlt-desarrolla-el-parque-industrial-vaca-muerta/",
+      "img": "f2b975d88f094ed0a0bfdbb1c1ecd0fd~mv2.jpg|ZLT_20251216_F0019.JPG"
+    },
+    {
+      "outlet": "Venado 24",
+      "date": "2025-12-20",
+      "title": "Junto a aliados estratégicos, ZLT desarrolla el Parque Industrial Vaca Muerta",
+      "url": "https://www.venado24.com.ar/argentina/c116-sociales/junto-a-aliados-estrategicos-zlt-desarrolla-el-parque-industrial-vaca-muerta/",
+      "img": "d4f7f2ce32704b84b4ec1839d7f1d231~mv2.jpg|07.jpg"
+    },
+    {
+      "outlet": "ADN Sur",
+      "date": "2025-12-19",
+      "title": "Junto a aliados estratégicos, ZLT desarrolla el Parque Industrial Vaca Muerta",
+      "url": "https://www.adnsur.com.ar/empresarias/junto-a-aliados-estrategicos--zlt-desarrolla-el-parque-industrial-vaca-muerta_a69453eda9a0e276960dc6da2",
+      "img": "309db32ab7e54b508eca0a0d99611933~mv2.jpg|ZLT_20251216_F0110.JPG"
+    },
+    {
+      "outlet": "Vaca Muerta",
+      "date": "2025-12-19",
+      "title": "El nuevo nodo logístico de Añelo avanzó un 60%",
+      "url": "https://vacamuerta.ar/el-nuevo-nodo-logistico-de-anelo-avanzo-un-60/",
+      "img": "d120ce12e8fa4a7f9fb45b604465fb39~mv2.jpg|ZLT_20251216_F0004.JPG"
+    },
+    {
+      "outlet": "Infobae",
+      "date": "2025-12-18",
+      "title": "Vaca Muerta suma un desarrollo industrial orientado a la eficiencia operativa",
+      "url": "https://www.infobae.com/inhouse/2025/12/18/vaca-muerta-suma-un-desarrollo-industrial-orientado-a-la-eficiencia-operativa/",
+      "img": "3d0a0d56067a406a8de055fea6549716~mv2.jpg|05%20B.jpg"
+    },
+    {
+      "outlet": "La Capital",
+      "date": "2025-10-12",
+      "title": "La empresa rosarina que desarrolla el único parque industrial privado en Vaca Muerta",
+      "url": "https://www.lacapital.com.ar/negocios/la-empresa-rosarina-que-desarrolla-el-unico-parque-industrial-privado-vaca-muerta-n10223408.html",
+      "img": "5c0f0c3861274255a45d2c0f18c3a08f~mv2.jpg|zlt-gino.jpg"
+    },
+    {
+      "outlet": "Forbes Argentina",
+      "date": "2025-10-02",
+      "title": "El primer parque industrial privado de Vaca Muerta ya presenta más de un 40% de avance",
+      "url": "https://www.forbesargentina.com/negocios/el-primer-parque-industrial-privado-vaca-muerta-ya-presenta-mas-40-avance-n79348",
+      "img": "9373fcd6a6264db999bfeea6c8f06c77~mv2.jpg|ZLT_AOG-62.jpg"
+    },
+    {
+      "outlet": "Info Negocios",
+      "date": "2025-10-02",
+      "title": "El primer Parque Industrial privado de Vaca Muerta llega a Añelo: una nueva propuesta para operar en el corazón productivo del país",
+      "url": "https://infonegocios.info/contenido-patrocinado/el-primer-parque-industrial-de-vaca-muerta-llega-a-anelo-una-nueva-propuesta-para-operar-en-el-corazon-productivo-del-pais",
+      "img": "e0718abf27dc463198d5960241781b6f~mv2.jpg|04.jpg"
+    },
+    {
+      "outlet": "ON24",
+      "date": "2025-09-25",
+      "title": "Un hub estratégico para pymes e industrias: empresa rosarina lanza el primer Parque Industrial Vaca Muerta",
+      "url": "https://www.on24.com.ar/economia/un-hub-estrategico-para-pymes-e-industrias-empresa-rosarina-lanza-el-primer-parque-industrial-vaca-muerta/",
+      "img": "3d0a0d56067a406a8de055fea6549716~mv2.jpg|05%20B.jpg"
+    },
+    {
+      "outlet": "Punto Biz",
+      "date": "2025-09-24",
+      "title": "Firma rosarina lanza el primer parque industrial privado de Vaca Muerta",
+      "url": "https://puntobiz.com.ar/actualidad/firma-rosarina-lanza-el-primer-parque-industrial-privado-de-vaca-muerta--2025924600",
+      "img": "73f65d62cac942709c1ac9fe1986a527~mv2.jpg|08.jpg"
+    },
+    {
+      "outlet": "Mejor Energía",
+      "date": "2025-09-19",
+      "title": "Lanzan un parque industrial privado en Añelo para acompañar el desarrollo petrolero",
+      "url": "https://www.mejorenergia.com.ar/noticias/2025/09/19/4631-lanzan-un-polo-logistico-privado-de-anelo-con-una-inversion-de-us50-millones",
+      "img": "d4f7f2ce32704b84b4ec1839d7f1d231~mv2.jpg|07.jpg"
+    },
+    {
+      "outlet": "El Cronista",
+      "date": "2025-09-18",
+      "title": "Vaca Muerta: con una inversión total de u$s 50 millones lanzan un parque logístico que apunta a las energéticas",
+      "url": "https://www.cronista.com/negocios/vaca-muerta-con-una-inversion-de-us-50-millones-lanzan-un-parque-logistico-que-apunta-a-las-energeticas/",
+      "img": "3d0a0d56067a406a8de055fea6549716~mv2.jpg|05%20B.jpg"
+    },
+    {
+      "outlet": "Mercado",
+      "date": "2025-09-17",
+      "title": "ZLT presenta el primer parque industrial privado en Vaca Muerta con entrega en 2026",
+      "url": "https://mercado.com.ar/ladrillos-y-proyectos/zlt-presenta-el-primer-parque-industrial-privado-en-vaca-muerta-con-entrega-en-2026/",
+      "img": "66fd21d2232e4b29acb48e1fe65a622c~mv2.jpg|01.jpg"
+    },
+    {
+      "outlet": "Minuto Neuquén",
+      "date": "2025-09-17",
+      "title": "ZLT apuesta fuerte por Vaca Muerta: así será su primer parque industrial privado en Añelo",
+      "url": "https://www.minutoneuquen.com/neuquen/2025/9/17/zlt-apuesta-fuerte-por-vaca-muerta-asi-sera-su-primer-parque-industrial-privado-en-anelo-396836.html",
+      "img": "3d0a0d56067a406a8de055fea6549716~mv2.jpg|05%20B.jpg"
+    }
+  ],
+  "pages": {
+    "home": {
+      "title": {
+        "es": "Parque Industrial Vaca Muerta · Lotes industriales en Añelo, Neuquén",
+        "en": "Parque Industrial Vaca Muerta · Industrial lots in Añelo, Neuquén"
+      },
+      "description": {
+        "es": "103 lotes industriales escriturables, con posesión inmediata e infraestructura completa, en Añelo, el corazón de Vaca Muerta. Desarrolla ZLT.",
+        "en": "103 industrial lots with title deed, immediate possession and full infrastructure in Añelo, the heart of Vaca Muerta. Developed by ZLT."
+      },
+      "hero": {
+        "status": {
+          "es": "Obra finalizada · Listo para operar",
+          "en": "Works completed · Ready to operate"
+        },
+        "eyebrow": {
+          "es": "Añelo · Neuquén · Ruta 17, km 5",
+          "en": "Añelo · Neuquén · Route 17, km 5"
+        },
+        "title": {
+          "es": "El parque industrial de Vaca Muerta",
+          "en": "The industrial park of Vaca Muerta"
+        },
+        "lead": {
+          "es": "103 lotes escriturables, con posesión inmediata e infraestructura completa, en el corazón productivo del país.",
+          "en": "103 industrial lots with title deed, immediate possession and full infrastructure, in the productive heart of Argentina."
+        },
+        "cta1": {
+          "es": "Quiero instalar mi empresa",
+          "en": "Set up my company"
+        },
+        "cta2": {
+          "es": "Quiero invertir",
+          "en": "I want to invest"
+        }
+      },
+      "paths": {
+        "eyebrow": {
+          "es": "Dos formas de sumarte",
+          "en": "Two ways to join"
+        },
+        "title": {
+          "es": "Un parque pensado para operar y para invertir",
+          "en": "A park built to operate in and to invest in"
+        },
+        "empresas": {
+          "tag": {
+            "es": "Para empresas",
+            "en": "For companies"
+          },
+          "title": {
+            "es": "Operá en el corazón de Vaca Muerta",
+            "en": "Operate in the heart of Vaca Muerta"
+          },
+          "text": {
+            "es": "Tu base operativa a minutos de los yacimientos: lote propio, servicios listos y la opción de recibir tu nave llave en mano.",
+            "en": "Your operating base minutes from the fields: your own lot, services in place and the option of a turnkey warehouse."
+          },
+          "bullets_es": [
+            "Lotes de 1.350 a 4.350 m²",
+            "Escritura y posesión inmediata",
+            "Energía, agua, cloacas y fibra en cada lote"
+          ],
+          "bullets_en": [
+            "Lots from 1,350 to 4,350 m²",
+            "Title deed and immediate possession",
+            "Power, water, sewage and fiber to every lot"
+          ],
+          "cta": {
+            "es": "Ver propuesta para empresas",
+            "en": "See the offer for companies"
+          }
+        },
+        "inversores": {
+          "tag": {
+            "es": "Para inversores",
+            "en": "For investors"
+          },
+          "title": {
+            "es": "Un activo real donde está la demanda",
+            "en": "A real asset where the demand is"
+          },
+          "text": {
+            "es": "Comprá tu lote, desarrollá tu nave y alquilásela a las empresas que llegan a la cuenca. Nosotros te cotizamos la construcción llave en mano.",
+            "en": "Buy your lot, develop your warehouse and lease it to the companies arriving in the basin. We quote the turnkey construction for you."
+          },
+          "bullets_es": [
+            "Activo escriturable en el polo energético del país",
+            "Nave llave en mano cotizada por ZLT",
+            "Demanda de espacio operativo en crecimiento"
+          ],
+          "bullets_en": [
+            "Titled asset in the country's energy hub",
+            "Turnkey warehouse quoted by ZLT",
+            "Growing demand for operating space"
+          ],
+          "cta": {
+            "es": "Ver propuesta para inversores",
+            "en": "See the offer for investors"
+          }
+        }
+      },
+      "park": {
+        "eyebrow": {
+          "es": "El parque",
+          "en": "The park"
+        },
+        "title": {
+          "es": "Infraestructura lista para la industria que mueve al país",
+          "en": "Infrastructure ready for the industry that drives the country"
+        },
+        "text": {
+          "es": "El Parque Industrial Vaca Muerta nace para responder a la creciente demanda de infraestructura en la región más estratégica del sector hidrocarburífero argentino. Pensado para las empresas que abastecen al Oil & Gas y buscan un posicionamiento estratégico, reúne en 34 hectáreas 103 lotes escriturables, con posesión inmediata y todos los servicios.",
+          "en": "Parque Industrial Vaca Muerta was created to meet the growing demand for infrastructure in the most strategic region of Argentina's hydrocarbon sector. Designed for the companies that supply Oil & Gas and are looking for a strategic position, it brings together 103 lots with title deed, immediate possession and full services across 34 hectares."
+        },
+        "masterplan_cap": {
+          "es": "Masterplan · 34 ha totales · 24 ha de lotes · 103 lotes",
+          "en": "Masterplan · 34 ha in total · 24 ha of lots · 103 lots"
+        }
+      },
+      "services": {
+        "eyebrow": {
+          "es": "Servicios e infraestructura",
+          "en": "Services and infrastructure"
+        },
+        "title": {
+          "es": "Todo resuelto, hasta la puerta de tu lote",
+          "en": "Everything sorted, right up to your lot"
+        },
+        "cta": {
+          "es": "Ver ficha técnica",
+          "en": "See technical specs"
+        }
+      },
+      "location": {
+        "eyebrow": {
+          "es": "Ubicación estratégica",
+          "en": "Strategic location"
+        },
+        "title": {
+          "es": "En el corazón de Vaca Muerta",
+          "en": "In the heart of Vaca Muerta"
+        },
+        "text": {
+          "es": "Añelo es el principal nodo logístico de la formación: desde acá operan las empresas de primera línea del sector y su cadena de proveedores. El parque está sobre la Ruta 17, km 5, con conexión directa a la Ruta 7 y a toda la cuenca neuquina.",
+          "en": "Añelo is the formation's main logistics hub: the sector's leading operators and their supply chain work from here. The park sits on Route 17, km 5, with direct access to Route 7 and the whole Neuquén basin."
+        },
+        "cta": {
+          "es": "Cómo llegar",
+          "en": "Get directions"
+        }
+      },
+      "gallery": {
+        "eyebrow": {
+          "es": "El parque hoy",
+          "en": "The park today"
+        },
+        "title": {
+          "es": "Obra terminada, lista para recibir empresas",
+          "en": "Works completed, ready to welcome companies"
+        },
+        "date": {
+          "es": "Fotos de septiembre de 2026",
+          "en": "Photos from September 2026"
+        }
+      },
+      "stage": {
+        "eyebrow": {
+          "es": "Próxima etapa",
+          "en": "Next stage"
+        },
+        "title": {
+          "es": "La primera y la última parada de Vaca Muerta",
+          "en": "The first and last stop in Vaca Muerta"
+        },
+        "text": {
+          "es": "En el frente del parque se suma una zona comercial con locales y cocheras, y una estación de servicio con parador: la primera y la última parada de quien entra y sale de Vaca Muerta.",
+          "en": "A retail area with shops and parking, plus a service station with a roadside stop, is coming to the front of the park: the first and last stop for everyone entering and leaving Vaca Muerta."
+        },
+        "cta": {
+          "es": "Consultar por un local",
+          "en": "Ask about a shop"
+        },
+        "sub": {
+          "es": "PIVM Service Center",
+          "en": "PIVM Service Center"
+        },
+        "intro": {
+          "eyebrow": {
+            "es": "Por qué acá",
+            "en": "Why here"
+          },
+          "title": {
+            "es": "Una demanda que ya existe",
+            "en": "Demand that already exists"
+          },
+          "text": {
+            "es": "Miles de profesionales y cientos de empresas radicadas en Añelo circulan a diario con una demanda de servicios que el mercado local todavía no satisface. El Service Center se ubica en el ingreso al parque industrial y frente al bypass, donde se cruzan el tránsito de la ruta y el de las empresas instaladas.",
+            "en": "Thousands of professionals and hundreds of companies based in Añelo travel through every day with a demand for services the local market still cannot meet. The Service Center sits at the entrance to the industrial park and on the bypass, where road traffic meets the traffic of the companies based in the park."
+          }
+        },
+        "parts": [
+          {
+            "img": "fotos/service-center/locales",
+            "es": "Zona comercial",
+            "en": "Retail area",
+            "d_es": "Locales comerciales con estacionamiento propio, pensados para comercios y empresas de servicios.",
+            "d_en": "Shops with their own parking, designed for retailers and service companies.",
+            "facts_es": [
+              "9 locales de 240 m² (opción doble planta)",
+              "6 locales de 120 m²",
+              "3.000 m² cubiertos · 60 cocheras"
+            ],
+            "facts_en": [
+              "9 shops of 240 m² (optional double height)",
+              "6 shops of 120 m²",
+              "3,000 m² covered · 60 parking spaces"
+            ]
+          },
+          {
+            "img": "fotos/service-center/estacion",
+            "es": "Estación de servicio con parador",
+            "en": "Service station and roadside stop",
+            "d_es": "Combustible, boxes de servicio y parador para el tránsito pesado y liviano del corredor.",
+            "d_en": "Fuel, service bays and a roadside stop for the corridor's heavy and light traffic.",
+            "facts_es": [
+              "Boxes de servicio",
+              "Parador",
+              "Acceso desde el bypass"
+            ],
+            "facts_en": [
+              "Service bays",
+              "Roadside stop",
+              "Access from the bypass"
+            ]
+          }
+        ],
+        "rubros": {
+          "eyebrow": {
+            "es": "Rubros aptos",
+            "en": "Suitable businesses"
+          },
+          "title": {
+            "es": "Un ecosistema para dos lógicas de negocio",
+            "en": "One ecosystem, two business models"
+          },
+          "productos": {
+            "title": {
+              "es": "Productos",
+              "en": "Products"
+            },
+            "sub": {
+              "es": "Venden al flujo",
+              "en": "Selling to the flow"
+            },
+            "items_es": [
+              "Ferretería",
+              "Indumentaria y ropa de trabajo",
+              "Supermercado",
+              "Farmacia",
+              "Repuestos y consumibles"
+            ],
+            "items_en": [
+              "Hardware store",
+              "Workwear and clothing",
+              "Supermarket",
+              "Pharmacy",
+              "Spare parts and consumables"
+            ],
+            "text": {
+              "es": "Con frente al bypass y miles de personas circulando a diario, acceden a una demanda de paso constante: consumo por conveniencia y necesidad inmediata, sin tener que generar tránsito.",
+              "en": "Facing the bypass, with thousands of people passing every day, they tap into constant passing demand: convenience and immediate-need purchases, without having to generate traffic."
+            }
+          },
+          "servicios": {
+            "title": {
+              "es": "Servicios",
+              "en": "Services"
+            },
+            "sub": {
+              "es": "Venden a la permanencia",
+              "en": "Selling to the regulars"
+            },
+            "items_es": [
+              "Aseguradora",
+              "Sala médica",
+              "Estudio contable",
+              "Logística y courier",
+              "Gastronomía"
+            ],
+            "items_en": [
+              "Insurance",
+              "Medical office",
+              "Accounting firm",
+              "Logistics and courier",
+              "Food and beverage"
+            ],
+            "text": {
+              "es": "Encuentran a su cliente instalado: las empresas Oil & Gas y los profesionales que operan en la zona todo el año. La cercanía se traduce en capacidad de respuesta y presencia institucional.",
+              "en": "Their customers are already here: the Oil & Gas companies and professionals who work in the area all year round. Proximity means responsiveness and an institutional presence."
+            }
+          }
+        },
+        "gallery": {
+          "eyebrow": {
+            "es": "Renders",
+            "en": "Renders"
+          },
+          "title": {
+            "es": "Así será el Service Center",
+            "en": "What the Service Center will look like"
+          },
+          "items": [
+            {
+              "src": "fotos/service-center/aerea",
+              "es": "Vista aérea del frente del parque",
+              "en": "Aerial view of the park frontage"
+            },
+            {
+              "src": "fotos/service-center/aerea-2",
+              "es": "Zona comercial y estacionamiento",
+              "en": "Retail area and parking"
+            },
+            {
+              "src": "fotos/service-center/locales",
+              "es": "Galería de locales",
+              "en": "Shopping arcade"
+            },
+            {
+              "src": "fotos/service-center/explanada",
+              "es": "Explanada y circulación",
+              "en": "Plaza and walkways"
+            },
+            {
+              "src": "fotos/service-center/estacion",
+              "es": "Estación de servicio",
+              "en": "Service station"
+            },
+            {
+              "src": "fotos/service-center/boxes",
+              "es": "Boxes de servicio",
+              "en": "Service bays"
+            }
+          ]
+        }
+      },
+      "press": {
+        "eyebrow": {
+          "es": "Prensa",
+          "en": "Press"
+        },
+        "title": {
+          "es": "Lo que se dice del parque",
+          "en": "What the press says"
+        }
+      }
+    },
+    "empresas": {
+      "title": {
+        "es": "Empresas · Instalá tu operación en Vaca Muerta | PIVM",
+        "en": "Companies · Set up your operation in Vaca Muerta | PIVM"
+      },
+      "description": {
+        "es": "Lotes industriales escriturables con posesión inmediata en Añelo: energía, agua, cloacas, fibra óptica, asfalto y seguridad 24 h. Naves llave en mano.",
+        "en": "Industrial lots with title deed and immediate possession in Añelo: power, water, sewage, fiber, paved roads and 24 h security. Turnkey warehouses."
+      },
+      "hero": {
+        "eyebrow": {
+          "es": "Para empresas",
+          "en": "For companies"
+        },
+        "title": {
+          "es": "Tu empresa en el corazón productivo del país",
+          "en": "Your company in the productive heart of Argentina"
+        },
+        "lead": {
+          "es": "Lotes industriales escriturables, con posesión inmediata e infraestructura completa, a minutos de los principales yacimientos de Vaca Muerta.",
+          "en": "Industrial lots with title deed, immediate possession and full infrastructure, minutes from Vaca Muerta's main fields."
+        },
+        "cta1": {
+          "es": "Consultar disponibilidad",
+          "en": "Check availability"
+        }
+      },
+      "why": {
+        "eyebrow": {
+          "es": "Por qué el parque",
+          "en": "Why the park"
+        },
+        "title": {
+          "es": "Pensado para quienes abastecen al Oil & Gas",
+          "en": "Designed for Oil & Gas suppliers"
+        },
+        "items": [
+          {
+            "n": "01",
+            "es": "Cerca de la operación",
+            "en": "Close to operations",
+            "d_es": "En Añelo, el nodo logístico de la cuenca, sobre la Ruta 17 y con salida directa a la Ruta 7. Menos kilómetros, menos tiempos muertos.",
+            "d_en": "In Añelo, the basin's logistics hub, on Route 17 with direct access to Route 7. Fewer kilometres, less downtime."
+          },
+          {
+            "n": "02",
+            "es": "Listo para construir",
+            "en": "Ready to build",
+            "d_es": "Obra de infraestructura terminada. Escriturás, tomás posesión y empezás tu proyecto sin esperar servicios.",
+            "d_en": "Infrastructure works are finished. You sign the deed, take possession and start your project without waiting for utilities."
+          },
+          {
+            "n": "03",
+            "es": "Un entorno ordenado",
+            "en": "An orderly environment",
+            "d_es": "Normas urbanísticas claras, calles asfaltadas, forestación perimetral y seguridad privada las 24 horas.",
+            "d_en": "Clear zoning rules, paved streets, perimeter landscaping and 24-hour private security."
+          }
+        ]
+      },
+      "tech": {
+        "eyebrow": {
+          "es": "Ficha técnica",
+          "en": "Technical specs"
+        },
+        "title": {
+          "es": "Servicios dimensionados para la industria",
+          "en": "Services sized for industry"
+        }
+      },
+      "lots": {
+        "eyebrow": {
+          "es": "Lotes y masterplan",
+          "en": "Lots and masterplan"
+        },
+        "title": {
+          "es": "103 lotes, de 1.350 a 4.350 m²",
+          "en": "103 lots, from 1,350 to 4,350 m²"
+        },
+        "text": {
+          "es": "34 hectáreas totales y 24 hectáreas de lotes, organizadas sobre una avenida central y calles internas asfaltadas. Elegí la superficie que necesita tu operación hoy, con margen para crecer.",
+          "en": "34 hectares in total and 24 hectares of lots, laid out along a central avenue and paved internal streets. Choose the area your operation needs today, with room to grow."
+        },
+        "urban_title": {
+          "es": "Indicadores urbanísticos",
+          "en": "Zoning indicators"
+        }
+      },
+      "sectors": {
+        "eyebrow": {
+          "es": "Para qué rubros",
+          "en": "Which sectors"
+        },
+        "title": {
+          "es": "Un parque para toda la cadena de valor",
+          "en": "A park for the whole value chain"
+        },
+        "items_es": [
+          "Servicios petroleros",
+          "Logística y transporte",
+          "Metalmecánica y talleres",
+          "Depósitos y almacenamiento",
+          "Insumos y repuestos",
+          "Comercio mayorista con depósito",
+          "Servicios industriales",
+          "Equipos y maquinaria"
+        ],
+        "items_en": [
+          "Oilfield services",
+          "Logistics and transport",
+          "Metalworking and workshops",
+          "Warehousing and storage",
+          "Supplies and spare parts",
+          "Wholesale trade with storage",
+          "Industrial services",
+          "Equipment and machinery"
+        ]
+      },
+      "turnkey": {
+        "eyebrow": {
+          "es": "Naves llave en mano",
+          "en": "Turnkey warehouses"
+        },
+        "title": {
+          "es": "¿Necesitás tu nave? Te la entregamos lista",
+          "en": "Need a warehouse? We hand it over ready"
+        },
+        "text": {
+          "es": "ZLT diseña y construye naves industriales a medida de cada operación, dentro del mismo parque. Pedinos la cotización junto con tu lote y resolvé todo con un solo interlocutor.",
+          "en": "ZLT designs and builds industrial warehouses tailored to each operation, inside the park. Ask for a quote together with your lot and deal with a single partner."
+        },
+        "cta": {
+          "es": "Pedir cotización",
+          "en": "Request a quote"
+        }
+      },
+      "steps": {
+        "eyebrow": {
+          "es": "Cómo empezar",
+          "en": "How to start"
+        },
+        "title": {
+          "es": "De la consulta a la operación",
+          "en": "From enquiry to operation"
+        },
+        "items": [
+          {
+            "es": "Consultá disponibilidad",
+            "en": "Check availability",
+            "d_es": "Te mostramos los lotes disponibles y te ayudamos a elegir el que mejor se adapta.",
+            "d_en": "We show you the available lots and help you choose the best fit."
+          },
+          {
+            "es": "Reservá tu lote",
+            "en": "Reserve your lot",
+            "d_es": "Asegurás la ubicación y avanzamos con la documentación.",
+            "d_en": "You secure the location and we move forward with the paperwork."
+          },
+          {
+            "es": "Escriturá y tomá posesión",
+            "en": "Sign the deed and take possession",
+            "d_es": "Lotes escriturables, con posesión inmediata.",
+            "d_en": "Lots with title deed and immediate possession."
+          },
+          {
+            "es": "Construí y operá",
+            "en": "Build and operate",
+            "d_es": "Con tu propio proyecto o con una nave llave en mano de ZLT.",
+            "d_en": "With your own project or a turnkey warehouse by ZLT."
+          }
+        ]
+      }
+    },
+    "inversores": {
+      "title": {
+        "es": "Inversores · Lotes industriales en Vaca Muerta | PIVM",
+        "en": "Investors · Industrial lots in Vaca Muerta | PIVM"
+      },
+      "description": {
+        "es": "Invertí en un lote industrial escriturable en Añelo, Vaca Muerta. Desarrollá tu nave —ZLT la cotiza llave en mano— y alquilala a empresas del sector.",
+        "en": "Invest in an industrial lot with title deed in Añelo, Vaca Muerta. Develop your warehouse —ZLT quotes it turnkey— and lease it to companies in the sector."
+      },
+      "hero": {
+        "eyebrow": {
+          "es": "Para inversores",
+          "en": "For investors"
+        },
+        "title": {
+          "es": "Invertí donde está la demanda",
+          "en": "Invest where the demand is"
+        },
+        "lead": {
+          "es": "Un lote industrial escriturable, con posesión inmediata, en el epicentro energético de la Argentina. Desarrollá tu nave y alquilásela a las empresas que operan en Vaca Muerta.",
+          "en": "An industrial lot with title deed and immediate possession at the epicentre of Argentina's energy sector. Develop your warehouse and lease it to the companies operating in Vaca Muerta."
+        },
+        "cta1": {
+          "es": "Solicitar propuesta comercial",
+          "en": "Request a commercial proposal"
+        }
+      },
+      "project": {
+        "eyebrow": {
+          "es": "El proyecto",
+          "en": "The project"
+        },
+        "title": {
+          "es": "El primer parque industrial privado de Vaca Muerta",
+          "en": "Vaca Muerta's first private industrial park"
+        },
+        "text": {
+          "es": "Desarrollado por ZLT junto a aliados estratégicos, el parque ofrece 103 lotes en 34 hectáreas sobre la Ruta 17, en Añelo. La obra de infraestructura está terminada y el parque está listo para recibir empresas.",
+          "en": "Developed by ZLT together with strategic partners, the park offers 103 lots across 34 hectares on Route 17, in Añelo. Infrastructure works are complete and the park is ready to welcome companies."
+        },
+        "timeline": [
+          {
+            "date": {
+              "es": "Sep 2025",
+              "en": "Sep 2025"
+            },
+            "es": "Lanzamiento",
+            "en": "Launch",
+            "d_es": "Presentación del primer parque industrial privado de Vaca Muerta.",
+            "d_en": "Launch of Vaca Muerta's first private industrial park."
+          },
+          {
+            "date": {
+              "es": "Mar 2026",
+              "en": "Mar 2026"
+            },
+            "es": "Inauguración",
+            "en": "Inauguration",
+            "d_es": "Acto de inauguración en Añelo junto a autoridades y aliados.",
+            "d_en": "Inauguration ceremony in Añelo with authorities and partners."
+          },
+          {
+            "date": {
+              "es": "Sep 2026",
+              "en": "Sep 2026"
+            },
+            "es": "Obra finalizada",
+            "en": "Works completed",
+            "d_es": "Infraestructura terminada: el parque está listo para operar.",
+            "d_en": "Infrastructure finished: the park is ready to operate."
+          }
+        ]
+      },
+      "model": {
+        "eyebrow": {
+          "es": "Cómo funciona",
+          "en": "How it works"
+        },
+        "title": {
+          "es": "Tu inversión, en tres pasos",
+          "en": "Your investment, in three steps"
+        },
+        "items": [
+          {
+            "n": "01",
+            "es": "Comprás tu lote",
+            "en": "Buy your lot",
+            "d_es": "Escriturable y con posesión inmediata. Un activo real, a tu nombre.",
+            "d_en": "With title deed and immediate possession. A real asset, in your name."
+          },
+          {
+            "n": "02",
+            "es": "Desarrollás tu nave",
+            "en": "Develop your warehouse",
+            "d_es": "Por tu cuenta o llave en mano: ZLT te cotiza el diseño y la construcción.",
+            "d_en": "On your own or turnkey: ZLT quotes the design and construction."
+          },
+          {
+            "n": "03",
+            "es": "La alquilás a empresas",
+            "en": "Lease it to companies",
+            "d_es": "Vos definís la estrategia y la comercializás por tus propios medios a las empresas que operan en la cuenca.",
+            "d_en": "You set the strategy and market it yourself to the companies operating in the basin."
+          }
+        ],
+        "note": {
+          "es": "PIVM es venta de lotes. La construcción de la nave es opcional y se cotiza aparte; la comercialización y el alquiler quedan a cargo del inversor.",
+          "en": "PIVM sells lots. Warehouse construction is optional and quoted separately; marketing and leasing are handled by the investor."
+        }
+      },
+      "context": {
+        "eyebrow": {
+          "es": "Por qué Vaca Muerta",
+          "en": "Why Vaca Muerta"
+        },
+        "title": {
+          "es": "El motor energético de la Argentina",
+          "en": "Argentina's energy engine"
+        },
+        "text": {
+          "es": "Vaca Muerta concentra prácticamente toda la producción de shale del país y bate récords mes a mes. Cada nuevo pozo necesita bienes, servicios y espacio operativo cerca: ahí está la demanda que el parque viene a cubrir.",
+          "en": "Vaca Muerta accounts for virtually all of the country's shale output and keeps breaking records. Every new well needs goods, services and operating space nearby: that is the demand the park is here to meet."
+        },
+        "items": [
+          {
+            "num": "912.966",
+            "num_en": "912,966",
+            "unit": {
+              "es": "barriles/día",
+              "en": "barrels/day"
+            },
+            "es": "Récord histórico de producción de petróleo del país (julio 2026), con Neuquén aportando el 72%.",
+            "en": "All-time national oil production record (July 2026), with Neuquén contributing 72%."
+          },
+          {
+            "num": "97%",
+            "unit": {
+              "es": "",
+              "en": ""
+            },
+            "es": "Del petróleo producido en Neuquén es shale; a nivel país ya explica más del 69%.",
+            "en": "Of the oil produced in Neuquén is shale; nationally it already exceeds 69%."
+          },
+          {
+            "num": "USD 68.000M",
+            "num_en": "USD 68bn",
+            "unit": {
+              "es": "",
+              "en": ""
+            },
+            "es": "Ya invertidos en la zona, más USD 48.000M aprobados por RIGI.",
+            "en": "Already invested in the area, plus USD 48bn approved under RIGI."
+          },
+          {
+            "num": "+174",
+            "unit": {
+              "es": "empresas",
+              "en": "companies"
+            },
+            "es": "De primera línea operan en la región, junto a más de 4.000 pymes de la cadena de valor.",
+            "en": "Leading companies operate in the region, alongside more than 4,000 SMEs in the value chain."
+          }
+        ],
+        "source": {
+          "es": "Fuente: Brochure PIVM 2026, en base a datos sectoriales a mediados de 2026.",
+          "en": "Source: PIVM Brochure 2026, based on sector data as of mid-2026."
+        }
+      },
+      "zlt": {
+        "eyebrow": {
+          "es": "Desarrolla",
+          "en": "Developer"
+        },
+        "title": {
+          "es": "ZLT, el nexo entre los inversores y la economía real",
+          "en": "ZLT, the link between investors and the real economy"
+        },
+        "text": {
+          "es": "ZLT es una empresa especializada en el desarrollo y la gestión de oportunidades de inversión en la economía real. Opera en sectores estratégicos vinculados al crecimiento productivo —oil & gas, minería, logística, retail y desarrollos residenciales— con un portfolio que integra activos en polos de expansión como Vaca Muerta.",
+          "en": "ZLT specialises in developing and managing investment opportunities in the real economy. It operates in strategic sectors linked to productive growth —oil & gas, mining, logistics, retail and residential developments— with a portfolio that includes assets in expansion hubs such as Vaca Muerta."
+        },
+        "cta": {
+          "es": "Conocé ZLT",
+          "en": "About ZLT"
+        },
+        "url": "https://somoszlt.com/"
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": {
+      "es": "Contacto",
+      "en": "Contact"
+    },
+    "title": {
+      "es": "Hablemos de tu lote en Vaca Muerta",
+      "en": "Let's talk about your lot in Vaca Muerta"
+    },
+    "text": {
+      "es": "Dejanos tus datos y te respondemos por WhatsApp o por mail con disponibilidad, valores y la propuesta que mejor se adapte a tu proyecto.",
+      "en": "Leave your details and we will reply by WhatsApp or email with availability, prices and the proposal that best fits your project."
+    },
+    "profiles": [
+      {
+        "id": "empresa",
+        "es": "Soy una empresa y quiero instalarme",
+        "en": "I'm a company looking to set up",
+        "modes": [
+          "empresa"
+        ]
+      },
+      {
+        "id": "inversor",
+        "es": "Quiero invertir en un lote",
+        "en": "I want to invest in a lot",
+        "modes": [
+          "inversor"
+        ]
+      },
+      {
+        "id": "nave",
+        "es": "Quiero cotizar una nave llave en mano",
+        "en": "I want a quote for a turnkey warehouse",
+        "modes": [
+          "empresa",
+          "inversor"
+        ]
+      },
+      {
+        "id": "service-center",
+        "es": "Me interesa el Service Center",
+        "en": "I'm interested in the Service Center",
+        "modes": [
+          "empresa"
+        ]
+      },
+      {
+        "id": "otro",
+        "es": "Otra consulta",
+        "en": "Other enquiry",
+        "modes": [
+          "empresa",
+          "inversor"
+        ]
+      }
+    ],
+    "switch": {
+      "aria": {
+        "es": "Perfil",
+        "en": "Profile"
+      },
+      "empresa": {
+        "es": "Soy empresa",
+        "en": "I'm a company"
+      },
+      "inversor": {
+        "es": "Soy inversor",
+        "en": "I'm an investor"
+      },
+      "msg_empresa": {
+        "es": "Contanos sobre tu operación: superficie, rubro, plazos…",
+        "en": "Tell us about your operation: area, sector, timing…"
+      },
+      "msg_inversor": {
+        "es": "Contanos qué buscás: superficie, plazo de inversión, si querés cotizar la nave…",
+        "en": "Tell us what you're looking for: area, investment horizon, whether you want a warehouse quote…"
+      }
+    }
+  },
+  "masterplan": {
+    "legend_title": {
+      "es": "Tipologías de lotes",
+      "en": "Lot types"
+    },
+    "hint": {
+      "es": "Pasá el mouse sobre un lote para ver su ficha.",
+      "en": "Hover over a lot to see its details."
+    },
+    "hint_touch": {
+      "es": "Tocá un lote para ver su ficha (en el celular, deslizá el plano).",
+      "en": "Tap a lot to see its details (on mobile, swipe the plan)."
+    },
+    "lot": {
+      "es": "Lote",
+      "en": "Lot"
+    },
+    "area": {
+      "es": "Superficie",
+      "en": "Area"
+    },
+    "dims": {
+      "es": "Medidas",
+      "en": "Dimensions"
+    },
+    "front": {
+      "es": "frente",
+      "en": "frontage"
+    },
+    "depth": {
+      "es": "fondo",
+      "en": "depth"
+    },
+    "fos": {
+      "es": "FOS",
+      "en": "Site coverage (FOS)"
+    },
+    "fot": {
+      "es": "FOT",
+      "en": "Floor area ratio (FOT)"
+    },
+    "upto": {
+      "es": "hasta",
+      "en": "up to"
+    },
+    "note": {
+      "es": "Medidas aproximadas, sujetas a mensura. FOS y FOT según el reglamento del parque.",
+      "en": "Approximate dimensions, subject to survey. FOS and FOT as per the park regulations."
+    },
+    "types": [
+      {
+        "id": "t1350",
+        "es": "1.350 m²",
+        "en": "1,350 m²",
+        "d_es": "30 × 45 m",
+        "d_en": "30 × 45 m",
+        "color": "#F5DEB1"
+      },
+      {
+        "id": "t2166",
+        "es": "2.166 m²",
+        "en": "2,166 m²",
+        "d_es": "38 × 57 m",
+        "d_en": "38 × 57 m",
+        "color": "#E39B3A"
+      },
+      {
+        "id": "t2566",
+        "es": "2.566 m²",
+        "en": "2,566 m²",
+        "d_es": "45 × 57 m",
+        "d_en": "45 × 57 m",
+        "color": "#C8553D"
+      },
+      {
+        "id": "t3155",
+        "es": "3.155 m²",
+        "en": "3,155 m²",
+        "d_es": "45 × 70 m",
+        "d_en": "45 × 70 m",
+        "color": "#5B8DC9"
+      },
+      {
+        "id": "t4000",
+        "es": "Más de 4.000 m²",
+        "en": "Over 4,000 m²",
+        "d_es": "4.054 y 4.324 m²",
+        "d_en": "4,054 and 4,324 m²",
+        "color": "#2E5E9E"
+      },
+      {
+        "id": "tmacro",
+        "es": "Macrolote",
+        "en": "Macro lot",
+        "d_es": "26.733 m²",
+        "d_en": "26,733 m²",
+        "color": "#2C3E50"
+      },
+      {
+        "id": "totras",
+        "es": "Otras medidas",
+        "en": "Other sizes",
+        "d_es": "1.002 a 3.646 m²",
+        "d_en": "1,002 to 3,646 m²",
+        "color": "#A9B4BE"
+      }
+    ]
+  }
+}

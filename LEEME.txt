@@ -1,0 +1,60 @@
+WEB PARQUE INDUSTRIAL VACA MUERTA (PIVM)
+Repositorio completo · 13/10/2026
+
+Es la web nueva de PIVM, pensada para reemplazar a la actual de Wix
+(vacamuertaindustria.com) cuando se decida la mudanza. Toma la estructura de
+ZLT-WEB-V2 y le aplica la marca PIVM (manual de marca 2026).
+
+Son tres páginas:
+
+  /                 inicio: video, datos clave, empresas o inversores, el parque,
+                    servicios, ubicación, galería + recorrido 360°, próxima
+                    etapa (Service Center), prensa, acompañan y contacto
+  /empresas/        para las empresas que quieren operar en el parque
+  /inversores/      para quien compra el lote y desarrolla su nave
+
+A DIFERENCIA DE LA V2, ACÁ NO HAY UN SOLO HTML CON TODO ADENTRO: cada página es
+un HTML liviano y las fotos, logos, videos y el brochure van en sus carpetas.
+Es así por el video del encabezado (no entra en un HTML) y para que la web
+cargue rápido. Por eso las carpetas de abajo se suben completas.
+
+CÓMO SE EDITA
+
+  1. Todos los textos (en español y en inglés) y los datos están en
+     content.json. No se escribe texto directo en los HTML.
+  2. Se regeneran las páginas con:   python3 build.py
+  3. Se verifica con:                python3 -m http.server 8765
+                                     python3 tools/check.py --shots
+  4. Se sube a GitHub (rama main) y el workflow lo publica en GitHub Pages.
+
+CÓMO ESTÁ ORDENADO
+
+  index.html, empresas/, inversores/, 404.html
+                    las páginas que se publican (las genera build.py)
+  content.json      textos ES/EN y datos: la fuente de verdad
+  build.py          el generador
+  html/             el esqueleto común de las páginas (base.html)
+  css/ js/          diseño y comportamiento (idioma, video, galerías, formulario)
+  fonts/            Urbanist (licencia libre), respaldo de Gilroy
+  fotos/
+    parque/         fotos reales, septiembre 2026
+    renders/        renders definitivos del parque
+    masterplan/     masterplan y vista en el entorno
+    service-center/ renders del Service Center
+  logos/            PIVM (vector), Service Center, ZLT y acompanan/
+  iconos/           iconografía oficial de servicios (manual de marca)
+    web/            favicon, íconos de celular, imagen para compartir
+  brochures/        Brochure_Digital_PIVM_2026.pdf (el vigente)
+  videos/           video del encabezado 16:9 (computadora) y 9:16 (celular)
+  links/            planillas: videos y 360°, contacto y redes, prensa, ubicación
+  tools/            process_media.py (prepara fotos, logos y video desde la
+                    carpeta de SharePoint) y check.py (verificación)
+
+TRES COSAS PARA TENER EN CUENTA
+
+  · Está en noindex: Google no la va a mostrar hasta la mudanza. Se cambia en
+    content.json → "indexable": true, y se vuelve a correr build.py.
+  · El Service Center no tiene página propia: es la sección "Próxima etapa"
+    de la home, para que la web siga vigente cuando esa etapa esté terminada.
+  · El formulario no guarda datos: arma el mensaje y lo abre en WhatsApp
+    (+54 9 3413 16-5100) o en el mail (vmindustria_info@somoszlt.com).

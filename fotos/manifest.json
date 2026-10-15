@@ -1,0 +1,208 @@
+{
+ "fotos/parque/aerea-avenida": {
+  "w": [
+   800,
+   1400,
+   2200
+  ],
+  "ratio": 1.3333
+ },
+ "fotos/parque/aerea-lotes": {
+  "w": [
+   800,
+   1400,
+   2200
+  ],
+  "ratio": 1.3333
+ },
+ "fotos/parque/aerea-anelo": {
+  "w": [
+   800,
+   1400,
+   2200
+  ],
+  "ratio": 1.3333
+ },
+ "fotos/parque/aerea-portico": {
+  "w": [
+   800,
+   1400,
+   2200
+  ],
+  "ratio": 1.3333
+ },
+ "fotos/parque/aerea-horizonte": {
+  "w": [
+   800,
+   1400,
+   2200
+  ],
+  "ratio": 1.3333
+ },
+ "fotos/parque/portico-frente": {
+  "w": [
+   800,
+   1400,
+   2200
+  ],
+  "ratio": 1.5
+ },
+ "fotos/parque/portico-lateral": {
+  "w": [
+   800,
+   1400,
+   2200
+  ],
+  "ratio": 1.5
+ },
+ "fotos/parque/portico-calle": {
+  "w": [
+   800,
+   1400,
+   2200
+  ],
+  "ratio": 1.5
+ },
+ "fotos/renders/aerea-parque": {
+  "w": [
+   800,
+   1400,
+   2000
+  ],
+  "ratio": 2.0
+ },
+ "fotos/renders/aerea-naves": {
+  "w": [
+   800,
+   1400,
+   2000
+  ],
+  "ratio": 2.0
+ },
+ "fotos/renders/calle-naves": {
+  "w": [
+   800,
+   1400,
+   2000
+  ],
+  "ratio": 2.0
+ },
+ "fotos/renders/ingreso-naves": {
+  "w": [
+   800,
+   1400,
+   2000
+  ],
+  "ratio": 2.0
+ },
+ "fotos/renders/avenida": {
+  "w": [
+   800,
+   1400,
+   2000
+  ],
+  "ratio": 2.0
+ },
+ "fotos/renders/nave": {
+  "w": [
+   800,
+   1400,
+   2000
+  ],
+  "ratio": 2.0
+ },
+ "fotos/renders/portico-noche": {
+  "w": [
+   800,
+   1400,
+   2000
+  ],
+  "ratio": 2.0
+ },
+ "fotos/masterplan/masterplan": {
+  "w": [
+   800,
+   1400,
+   1919
+  ],
+  "ratio": 2.255
+ },
+ "fotos/masterplan/entorno": {
+  "w": [
+   800,
+   1400,
+   1920
+  ],
+  "ratio": 1.7778
+ },
+ "fotos/parque/portico-detalle-1": {
+  "w": [
+   800,
+   1160
+  ],
+  "ratio": 1.5006
+ },
+ "fotos/parque/portico-detalle-2": {
+  "w": [
+   800,
+   1160
+  ],
+  "ratio": 1.5006
+ },
+ "fotos/parque/letras-1": {
+  "w": [
+   700,
+   1000
+  ],
+  "ratio": 0.6667
+ },
+ "fotos/parque/letras-2": {
+  "w": [
+   700,
+   1000
+  ],
+  "ratio": 0.6667
+ },
+ "fotos/service-center/aerea": {
+  "w": [
+   800,
+   1160
+  ],
+  "ratio": 1.7764
+ },
+ "fotos/service-center/aerea-2": {
+  "w": [
+   800,
+   1160
+  ],
+  "ratio": 1.7764
+ },
+ "fotos/service-center/locales": {
+  "w": [
+   800,
+   1160
+  ],
+  "ratio": 1.7764
+ },
+ "fotos/service-center/explanada": {
+  "w": [
+   800,
+   1160
+  ],
+  "ratio": 1.7764
+ },
+ "fotos/service-center/estacion": {
+  "w": [
+   800,
+   1160
+  ],
+  "ratio": 1.7764
+ },
+ "fotos/service-center/boxes": {
+  "w": [
+   800,
+   1160
+  ],
+  "ratio": 1.7764
+ }
+}

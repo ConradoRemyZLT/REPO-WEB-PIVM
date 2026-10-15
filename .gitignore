@@ -1,0 +1,13 @@
+# Capturas de verificación (se regeneran con tools/check.py)
+/tools/_capturas/
+# Copia armada del sitio (la genera el workflow de Pages)
+/_site/
+__pycache__/
+*.pyc
+# Archivos del sistema
+desktop.ini
+Thumbs.db
+~$*
+.DS_Store
+# Vistas previas autocontenidas (tools/make_preview.py)
+/preview/
