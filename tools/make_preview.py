@@ -23,6 +23,18 @@ def data_uri(path: Path):
         cache[path] = f"data:{mt};base64," + base64.b64encode(path.read_bytes()).decode()
     return cache[path]
 
+def light_video(p: Path) -> Path:
+    """Copia liviana del video para la vista previa (la web usa los HD de videos/)."""
+    import subprocess
+    out = OUT / "_cache" / (p.stem + "-preview.mp4")
+    if not out.exists() or out.stat().st_mtime < p.stat().st_mtime:
+        out.parent.mkdir(parents=True, exist_ok=True)
+        w = 540 if "9x16" in p.name else 960
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(p), "-vf", f"scale={w}:-2", "-c:v", "libx264", "-preset", "medium",
+                        "-crf", "30", "-pix_fmt", "yuv420p", "-an", "-movflags", "+faststart", str(out)], check=True)
+    return out
+
+
 def resolve(base: Path, url: str):
     url = url.split("?")[0].split("#")[0]
     p = (base / url).resolve()
@@ -37,6 +49,7 @@ def build(slug, name):
     css = css_path.read_text(encoding="utf-8")
     css = re.sub(r"url\((\.\./fonts/[^)]+)\)", lambda m: f"url({data_uri(resolve(css_path.parent, m.group(1)))})", css)
     h = re.sub(r'<link rel="stylesheet" href="[^"]*css/site\.css[^"]*">', lambda m: f"<style>{css}</style>", h)
+    h = re.sub(r'<script src="[^"]*gate\.js"></script>\n?', "", h)   # la vista previa no lleva login
     js = (ROOT / "js" / "site.js").read_text(encoding="utf-8")
     h = re.sub(r'<script src="[^"]*js/site\.js[^"]*" defer></script>', lambda m: f"<script>{js}</script>", h)
     h = re.sub(r'<link rel="(preload|manifest)"[^>]*>', "", h)
@@ -59,6 +72,7 @@ def build(slug, name):
         attr, url = m.group(1), m.group(2)
         if url.startswith(("http", "data:", "mailto:", "tel:", "#")): return m.group(0)
         p = resolve(base, url)
+        if p and p.suffix == ".mp4": p = light_video(p)
         return f'{attr}="{data_uri(p)}"' if p else m.group(0)
     h = re.sub(r'(src|poster|data-desktop|data-desktop-poster|data-mobile|data-mobile-poster|data-fallback|href)="([^"]+\.(?:webp|png|jpg|svg|ico|mp4))"', inline, h)
     h = re.sub(r'url\(([^)"\']+\.png)\)', lambda m: f"url({data_uri(resolve(base, m.group(1)))})" if resolve(base, m.group(1)) else m.group(0), h)

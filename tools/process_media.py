@@ -207,17 +207,17 @@ def do_video():
     h = base / "01-ZLT Parque Industrial 16-9.mp4"
     v = base / "01-ZLT Parque Industrial 9-16.mp4"
     out = ROOT / "videos"
-    # 16:9 escritorio — 1600x900, sin tocar fps
-    ffmpeg("-i", str(h), "-vf", "scale=1600:-2:flags=lanczos", "-c:v", "libx264", "-preset", "slow",
-           "-crf", "28", "-profile:v", "high", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "112k",
+    # 16:9 escritorio — 1920x1080 (HD), sin tocar fps
+    ffmpeg("-i", str(h), "-vf", "scale=1920:-2:flags=lanczos", "-c:v", "libx264", "-preset", "slow",
+           "-crf", "25", "-profile:v", "high", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "112k",
            "-movflags", "+faststart", str(out / "pivm-hero-16x9.mp4"))
-    # 9:16 móvil — 720x1280
-    ffmpeg("-i", str(v), "-vf", "scale=720:-2:flags=lanczos", "-c:v", "libx264", "-preset", "slow",
-           "-crf", "28", "-profile:v", "high", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "112k",
+    # 9:16 móvil — 1080x1920 (HD)
+    ffmpeg("-i", str(v), "-vf", "scale=1080:-2:flags=lanczos", "-c:v", "libx264", "-preset", "slow",
+           "-crf", "26", "-profile:v", "high", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "112k",
            "-movflags", "+faststart", str(out / "pivm-hero-9x16.mp4"))
     # pósters (primer cuadro visible mientras carga)
-    ffmpeg("-ss", "0.4", "-i", str(h), "-frames:v", "1", "-vf", "scale=1600:-2", "-q:v", "3", str(out / "pivm-hero-16x9.jpg"))
-    ffmpeg("-ss", "0.4", "-i", str(v), "-frames:v", "1", "-vf", "scale=720:-2", "-q:v", "3", str(out / "pivm-hero-9x16.jpg"))
+    ffmpeg("-ss", "0.4", "-i", str(h), "-frames:v", "1", "-q:v", "3", str(out / "pivm-hero-16x9.jpg"))
+    ffmpeg("-ss", "0.4", "-i", str(v), "-frames:v", "1", "-q:v", "3", str(out / "pivm-hero-9x16.jpg"))
     print("  video ok")
 
 

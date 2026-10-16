@@ -10,10 +10,138 @@
   };
   var reduced = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* ---------- pantalla de carga ----------
+     Fondo crema, logo del parque "respirando" y una línea con el avance real.
+     Se va recién cuando la página terminó de cargar y el video del encabezado está
+     descargado completo en HD (la versión de la pantalla: 16:9 o 9:16), para que
+     arranque sin cortes ni pixelado. No hay tiempo máximo: solo si la red se corta
+     y pasan 25 s sin ningún avance, se muestra la web igual. */
+  var PRE = { done: false, blobs: {}, cbs: [], ready: function (f) { if (PRE.done) f(); else PRE.cbs.push(f); } };
+  var YT_HERO = { ok: false, frame: null, wrap: null, paused: false, muted: true };
+  function fitYT() {
+    var w = d.querySelector('.hv-yt'), f = w && w.querySelector('iframe'); if (!f) return;
+    var W = w.clientWidth, H = w.clientHeight, r = 9 / 16, iw, ih;
+    if (W / H > r) { iw = W; ih = W / r; } else { ih = H; iw = H * r; }
+    f.style.width = Math.ceil(iw * 1.08) + 'px'; f.style.height = Math.ceil(ih * 1.08) + 'px';   // un poco más grande: recorta los bordes de YouTube
+  }
+  addEventListener('resize', fitYT, { passive: true });
+  function ytCmd(func) { if (YT_HERO.frame) try { YT_HERO.frame.contentWindow.postMessage(JSON.stringify({ event: 'command', func: func, args: [] }), '*'); } catch (e) {} }
+  (function () {
+    root.classList.add('js-on');
+    var pre = d.getElementById('pre');
+    if (!pre) { PRE.done = true; return; }
+    root.classList.add('loading');
+    // Con login (gate.js): la carga real arranca recién al ingresar, para que el video
+    // se descargue y arranque detrás de esta pantalla y no detrás del login.
+    if (root.style.visibility === 'hidden') {
+      var iv = setInterval(function () {
+        var ok = false; try { ok = sessionStorage.getItem('zlt_gate_ok') === '1'; } catch (e) {}
+        if (ok) { clearInterval(iv); start(); }
+      }, 150);
+    } else start();
+    function start() {
+    var bar = pre.querySelector('.pre-bar i'), parts = {}, shown = 0, last = Date.now(), jobs = [];
+    function paint() {
+      var tw = 0, acc = 0, k;
+      for (k in parts) { var p = parts[k]; tw += p.w; acc += p.w * (p.t ? Math.min(1, p.l / p.t) : 0); }
+      shown = Math.max(shown, tw ? acc / tw : 1);
+      if (bar) bar.style.width = (3 + shown * 97) + '%';
+    }
+    function put(k, l, t) { parts[k].l = l; if (t != null) parts[k].t = t; last = Date.now(); paint(); }
+    // 1 · la página (CSS, fotos visibles, tipografías)
+    parts.page = { l: 0, t: 1, w: 1 };
+    jobs.push(new Promise(function (r) { if (d.readyState === 'complete') r(); else addEventListener('load', r); })
+      .then(function () { return d.fonts && d.fonts.ready ? d.fonts.ready.catch(function () {}) : null; })
+      .then(function () { put('page', 1); }));
+    // 2 · el video del encabezado, descargado completo
+    var hv = d.querySelector('[data-hero-video]');
+    if (hv) {
+      var mq = matchMedia('(max-aspect-ratio: 4/5)');
+      var src = (mq.matches && hv.getAttribute('data-mobile')) || hv.getAttribute('data-desktop');
+      parts.video = { l: 0, t: 0, w: 6 };
+      var viaFetch = function () {
+        if (location.protocol === 'file:' || !window.fetch) return Promise.reject();
+        return fetch(src).then(function (r) {
+          if (!r.ok) throw new Error(r.status);
+          var type = r.headers.get('Content-Type') || 'video/mp4', total = +r.headers.get('Content-Length') || 0;
+          if (!r.body || !r.body.getReader || !total) return r.blob();
+          parts.video.t = total;
+          var rd = r.body.getReader(), chunks = [], got = 0;
+          return (function pump() {
+            return rd.read().then(function (x) {
+              if (x.done) return new Blob(chunks, { type: type });
+              chunks.push(x.value); got += x.value.length; put('video', got); return pump();
+            });
+          })();
+        }).then(function (b) { PRE.blobs[src] = URL.createObjectURL(b); put('video', 1, 1); });
+      };
+      // HTML abierto suelto (file://) o sin fetch: se espera a que el navegador lo pueda reproducir entero
+      var viaVideo = function () {
+        return new Promise(function (res) {
+          parts.video.t = 1;
+          var v = d.createElement('video'), end = function () { put('video', 1, 1); res(); };
+          v.muted = true; v.preload = 'auto';
+          v.addEventListener('canplaythrough', end, { once: true });
+          v.addEventListener('error', end, { once: true });
+          v.addEventListener('progress', function () {
+            try { if (v.duration && v.buffered.length) put('video', v.buffered.end(v.buffered.length - 1) / v.duration); } catch (e) {}
+          });
+          v.src = src; v.load();
+        });
+      };
+      // Celular: el Short vertical de YouTube. Si no arranca en 9 s (o da error), MP4 vertical de videos/.
+      var ytWrap = d.querySelector('.hv-yt'), ytId = ytWrap && ytWrap.getAttribute('data-hero-yt');
+      var startYT = function () {
+        return new Promise(function (res, rej) {
+          var f = d.createElement('iframe'), done = false;
+          var org = /^https?:$/.test(location.protocol) ? '&origin=' + encodeURIComponent(location.origin) : '';
+          f.src = 'https://www.youtube-nocookie.com/embed/' + ytId + '?autoplay=1&mute=1&controls=0&loop=1&playlist=' + ytId +
+            '&playsinline=1&rel=0&modestbranding=1&iv_load_policy=3&disablekb=1&fs=0&cc_load_policy=0&enablejsapi=1' + org;
+          f.title = 'Video'; f.setAttribute('allow', 'autoplay; encrypted-media; picture-in-picture');
+          f.setAttribute('tabindex', '-1'); f.setAttribute('aria-hidden', 'true');
+          parts.video.t = 1;
+          var fail = function () { if (done) return; done = true; removeEventListener('message', onMsg); f.remove(); rej(); };
+          var to = setTimeout(fail, 9000);
+          function onMsg(e) {
+            if (e.source !== f.contentWindow) return;
+            var m; try { m = typeof e.data === 'string' ? JSON.parse(e.data) : e.data; } catch (x) { return; }
+            if (!m) return;
+            var st = m.event === 'onStateChange' ? m.info : (m.info && typeof m.info === 'object' ? m.info.playerState : undefined);
+            if (m.event === 'onError') { clearTimeout(to); fail(); return; }
+            if (st === 1 && !done) { done = true; clearTimeout(to); YT_HERO.frame = f; YT_HERO.wrap = ytWrap; YT_HERO.ok = true; put('video', 1, 1); res(); }
+          }
+          addEventListener('message', onMsg);
+          f.addEventListener('load', function () {
+            put('video', 0.5);
+            var k = 0, ping = function () { try { f.contentWindow.postMessage(JSON.stringify({ event: 'listening', id: 1, channel: 'widget' }), '*'); } catch (x) {} };
+            ping(); var iv = setInterval(function () { if (done || ++k > 25) { clearInterval(iv); return; } ping(); }, 350);
+          });
+          ytWrap.appendChild(f); fitYT();
+        });
+      };
+      if (mq.matches && ytId) jobs.push(startYT().catch(function () { parts.video.l = 0; parts.video.t = 0; return viaFetch().catch(viaVideo); }));
+      else jobs.push(viaFetch().catch(viaVideo));
+    }
+    function finish() {
+      if (PRE.done) return;
+      PRE.done = true; shown = 1; if (bar) bar.style.width = '100%';
+      setTimeout(function () {
+        d.body.classList.add('ready'); root.classList.remove('loading');
+        PRE.cbs.forEach(function (f) { f(); });
+        setTimeout(function () { pre.setAttribute('hidden', ''); }, 900);
+      }, 380);
+    }
+    Promise.all(jobs).then(finish, finish);
+    (function guard() { if (PRE.done) return; if (Date.now() - last > 25000) return finish(); setTimeout(guard, 1000); })();
+    paint();
+    }
+  })();
+
   /* ---------- idioma ES / EN ---------- */
   function setLang(l, persist) {
     l = l === 'en' ? 'en' : 'es';
     root.setAttribute('lang', l);
+    d.querySelectorAll('iframe.gmap').forEach(function (f) { var s = f.getAttribute('src'); if (s && s.indexOf('hl=' + l) < 0) f.setAttribute('src', s.replace(/hl=\w+/, 'hl=' + l)); });
     d.querySelectorAll('[data-lang-btn]').forEach(function (b) {
       b.setAttribute('aria-pressed', b.getAttribute('data-lang-btn') === l ? 'true' : 'false');
     });
@@ -68,7 +196,7 @@
     var io = new IntersectionObserver(function (es) {
       es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('revealed'); io.unobserve(e.target); } });
     }, { threshold: 0.14, rootMargin: '0px 0px -6% 0px' });
-    revealEls.forEach(function (el) { io.observe(el); });
+    PRE.ready(function () { revealEls.forEach(function (el) { io.observe(el); }); });
   } else revealEls.forEach(function (el) { el.classList.add('revealed'); });
 
   /* ---------- contadores ---------- */
@@ -91,7 +219,7 @@
     var cio = new IntersectionObserver(function (es) {
       es.forEach(function (e) { if (e.isIntersecting) { animCount(e.target); cio.unobserve(e.target); } });
     }, { threshold: 0.6 });
-    d.querySelectorAll('[data-count]').forEach(function (el) { cio.observe(el); });
+    PRE.ready(function () { d.querySelectorAll('[data-count]').forEach(function (el) { cio.observe(el); }); });
   }
 
   /* ---------- video del hero ---------- */
@@ -106,31 +234,43 @@
     hv.muted = true; hv.defaultMuted = true; hv.playsInline = true;
     var userPaused = false;
     var tryPlay = function () {
+      if (YT_HERO.ok && mq.matches) return;
       if (userPaused || !hv.paused) return;
       var p = hv.play(); if (p && p.catch) p.catch(function () {});
     };
+    var ytOn = function () { return YT_HERO.ok && mq.matches; };
     var load = function () {
+      if (YT_HERO.wrap) YT_HERO.wrap.classList.toggle('on', ytOn());
+      if (ytOn()) { if (!hv.paused) hv.pause(); hv._src = 'yt'; fitYT(); sync(); return; }
       var s = pickSrc();
-      if (hv.getAttribute('src') === s) return;
+      if (hv._src === s) return;
+      hv._src = s;
       hv.setAttribute('poster', pickPoster());
-      hv.src = s;
+      hv.src = PRE.blobs[s] || s;   // ya descargado completo por la pantalla de carga
       hv.load();
       tryPlay();
     };
-    load();
+    PRE.ready(load);
     ['loadeddata', 'canplay'].forEach(function (ev) { hv.addEventListener(ev, tryPlay); });
     d.addEventListener('visibilitychange', function () { if (!d.hidden) tryPlay(); });
     var kick = function () { tryPlay(); if (!hv.paused) ['pointerdown', 'touchstart', 'keydown', 'scroll'].forEach(function (ev) { window.removeEventListener(ev, kick); }); };
     ['pointerdown', 'touchstart', 'keydown', 'scroll'].forEach(function (ev) { window.addEventListener(ev, kick, { passive: true }); });
-    if (mq.addEventListener) mq.addEventListener('change', load);
+    if (mq.addEventListener) mq.addEventListener('change', function () { if (PRE.done) load(); });
     var bPlay = d.querySelector('[data-v-play]'), bSnd = d.querySelector('[data-v-sound]');
-    var sync = function () {
-      if (bPlay) bPlay.classList.toggle('is-on', !hv.paused);
-      if (bSnd) bSnd.classList.toggle('is-on', !hv.muted);
-    };
+    function sync() {
+      var yt = YT_HERO.ok && mq.matches;
+      if (bPlay) bPlay.classList.toggle('is-on', yt ? !YT_HERO.paused : !hv.paused);
+      if (bSnd) bSnd.classList.toggle('is-on', yt ? !YT_HERO.muted : !hv.muted);
+    }
     hv.addEventListener('play', sync); hv.addEventListener('pause', sync); hv.addEventListener('volumechange', sync);
-    if (bPlay) bPlay.addEventListener('click', function () { if (hv.paused) { userPaused = false; hv.play(); } else { userPaused = true; hv.pause(); } });
-    if (bSnd) bSnd.addEventListener('click', function () { hv.muted = !hv.muted; if (!hv.muted && hv.paused) hv.play(); });
+    if (bPlay) bPlay.addEventListener('click', function () {
+      if (YT_HERO.ok && mq.matches) { YT_HERO.paused = !YT_HERO.paused; ytCmd(YT_HERO.paused ? 'pauseVideo' : 'playVideo'); sync(); return; }
+      if (hv.paused) { userPaused = false; hv.play(); } else { userPaused = true; hv.pause(); }
+    });
+    if (bSnd) bSnd.addEventListener('click', function () {
+      if (YT_HERO.ok && mq.matches) { YT_HERO.muted = !YT_HERO.muted; ytCmd(YT_HERO.muted ? 'mute' : 'unMute'); if (!YT_HERO.muted) { YT_HERO.paused = false; ytCmd('playVideo'); } sync(); return; }
+      hv.muted = !hv.muted; if (!hv.muted && hv.paused) hv.play();
+    });
     sync();
   }
 

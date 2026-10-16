@@ -683,3 +683,28 @@ body.mopen{overflow:hidden}
 .to-top.show{opacity:1;transform:none;pointer-events:auto}
 .to-top:hover{background:#1f2d3b;transform:translateY(-3px)}
 .to-top svg{width:20px;height:20px}
+
+/* ---------- pantalla de carga ---------- */
+#pre{position:fixed;inset:0;z-index:10000;background:var(--cream);color:var(--navy);display:grid;place-items:center;align-content:center;gap:clamp(28px,4vh,40px);
+  transition:opacity .8s var(--ease),visibility .8s;animation:preFailsafe .8s 45s forwards}
+.js-on #pre{animation:none}
+.no-js #pre,#pre[hidden]{display:none}
+body.ready #pre{opacity:0;visibility:hidden}
+html.loading,html.loading body{overflow:hidden}
+#pre .pre-logo{width:clamp(150px,17vw,220px);transform-origin:50% 55%;animation:preBreath 3.4s cubic-bezier(.45,0,.55,1) infinite}
+#pre .pre-logo svg{display:block;width:100%;height:auto}
+#pre .pre-bar{width:min(240px,56vw);height:2px;border-radius:2px;background:rgba(44,62,80,.16);overflow:hidden}
+#pre .pre-bar i{display:block;height:100%;width:3%;background:var(--navy);border-radius:2px;transition:width .45s cubic-bezier(.22,1,.36,1)}
+/* suspiro: inhala lento, sostiene, exhala */
+@keyframes preBreath{0%{transform:scale(.97);opacity:.82}42%{transform:scale(1.035);opacity:1}55%{transform:scale(1.035);opacity:1}100%{transform:scale(.97);opacity:.82}}
+@keyframes preFailsafe{to{opacity:0;visibility:hidden}}
+@media (prefers-reduced-motion:reduce){#pre .pre-logo{animation:none}}
+
+/* video vertical de YouTube (celular): ocupa el encabezado como fondo */
+.hero-media .hv-yt{position:absolute;inset:0;overflow:hidden;pointer-events:none;opacity:0;transition:opacity .6s var(--ease)}
+.hero-media .hv-yt.on{opacity:1}
+.hero-media .hv-yt iframe{position:absolute;top:50%;left:50%;border:0;pointer-events:none;transform:translate(-50%,-50%)}
+
+/* mapa real (Google Maps) en Ubicación */
+.map.gmap-box{position:relative;padding:0;overflow:hidden;min-height:clamp(340px,46vw,560px)}
+.map.gmap-box .gmap{position:absolute;inset:0;width:100%;height:100%;border:0;display:block;background:#dfe3e6}

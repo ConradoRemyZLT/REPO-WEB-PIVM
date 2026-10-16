@@ -273,6 +273,16 @@ def masterplan_map(rel, cap, alt):
   <figcaption>{t(cap)} · {t(M["note"])}</figcaption>
 </figure>'''
 
+
+def gmap():
+    """Mapa real e interactivo (Google Maps embebido, sin clave) con el pin en el parque."""
+    g = SITE["park_geo"]
+    q = "Parque Industrial Vaca Muerta, RP17, Añelo, Neuquén"
+    import urllib.parse as up
+    src = (f"https://maps.google.com/maps?q={up.quote(q)}&ll={g['lat']},{g['lon']}&z=12&t=k&hl=es&output=embed")
+    return (f'<iframe class="gmap" src="{esc(src)}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen '
+            f'{attr_i18n("title", {"es": "Mapa: ubicación del Parque Industrial Vaca Muerta en Añelo", "en": "Map: location of Parque Industrial Vaca Muerta in Añelo"})}></iframe>')
+
 def location_section(rel, intro, cls="sand"):
     lis = "".join(
         f'<li><div><b>{esc(d["city"])}</b><span>{tk(d, "")}</span></div><span class="km">{d["km"]}<small>km</small></span></li>'
@@ -280,7 +290,7 @@ def location_section(rel, intro, cls="sand"):
     return f'''<section class="sec {cls}" id="ubicacion">
   {bars("r t", "soft")}
   <div class="wrap loc">
-    <div class="map" data-reveal="scale">{map_svg()}</div>
+    <div class="map gmap-box" data-reveal="scale">{gmap()}</div>
     <div>{eyebrow(intro["eyebrow"])}<h2 class="h2" data-reveal="up">{t(intro["title"])}</h2>
       <p class="prose" data-reveal="up">{t(intro["text"])}</p>
       <ul class="dist" data-reveal="up">{lis}</ul>
@@ -417,6 +427,7 @@ def page_home(rel):
     <video data-hero-video autoplay muted loop playsinline preload="auto" poster="{rel}{hv["desktop_poster"]}"
       data-desktop="{rel}{hv["desktop"]}" data-mobile="{rel}{hv["mobile"]}"
       data-desktop-poster="{rel}{hv["desktop_poster"]}" data-mobile-poster="{rel}{hv["mobile_poster"]}" aria-hidden="true"></video>
+    <div class="hv-yt" data-hero-yt="{esc(hv.get("mobile_youtube", ""))}" aria-hidden="true"></div>
   </div>
   <div class="hero-inner">
     <div class="hero-eyebrow" data-reveal="up" style="--d:.05s">{t(h["eyebrow"])}</div>
@@ -712,6 +723,14 @@ def jsonld():
     return f'<script type="application/ld+json">{json.dumps(data, ensure_ascii=False)}</script>'
 
 
+
+def preloader():
+    """Pantalla de carga: fondo crema, logo que respira y línea de avance (ver js/site.js)."""
+    return (f'<div id="pre" role="status" aria-live="polite">'
+            f'<div class="pre-logo">{logo(label=False)}</div>'
+            f'<div class="pre-bar" aria-hidden="true"><i></i></div>'
+            f'<span class="sr-only">{pair("Cargando…", "Loading…")}</span></div>')
+
 def render(page, slug, body_fn):
     rel = "" if slug == "" else "../"
     meta = C["pages"][page]
@@ -728,6 +747,7 @@ def render(page, slug, body_fn):
         "rel": rel, "v": VERSION, "gilroy": gilroy, "page": page,
         "jsonld": jsonld() if page == "home" else "",
         "header": header(rel, page), "main": body_fn(rel), "footer": footer(rel),
+        "preloader": preloader(), "base": "",
     }
     for k, v in rep.items():
         out = out.replace("{{" + k + "}}", v)
@@ -739,15 +759,18 @@ def render(page, slug, body_fn):
 
 
 def page_404():
-    rel = "/"
+    rel = ""   # rutas relativas a la raíz del sitio, fijada con <base> (sirve en dominio propio y en usuario.github.io/repo/)
     body = f'''<section class="nf"><div><div class="flogo" style="color:var(--cream);margin:0 auto 34px;width:180px">{logo(label=False)}</div>
 <h1 class="hero-title" style="margin:0 auto;font-size:clamp(34px,5vw,60px)">{pair("Página no encontrada", "Page not found")}</h1>
-<div class="btns" style="justify-content:center"><a class="btn btn-cream" href="/">{pair("Volver al inicio", "Back to home")}</a></div></div></section>'''
+<div class="btns" style="justify-content:center"><a class="btn btn-cream" href="./">{pair("Volver al inicio", "Back to home")}</a></div></div></section>'''
     out = BASE
     rep = {"title_es": "Página no encontrada · PIVM", "title_en": "Page not found · PIVM", "desc_es": "",
            "robots": '<meta name="robots" content="noindex">', "canonical": SITE["url"] + "/", "og_image": "",
            "rel": rel, "v": VERSION, "gilroy": "", "page": "404", "jsonld": "",
-           "header": "", "main": body, "footer": ""}
+           "header": "", "main": body, "footer": "", "preloader": "",
+           "base": ('<script>(function(){var s=location.pathname.split("/")[1];'
+                    'var b=/\\.github\\.io$/.test(location.hostname)&&s?"/"+s+"/":"/";'
+                    'document.write(\'<base href="\'+b+\'">\')})()</script>\n')}
     for k, v in rep.items():
         out = out.replace("{{" + k + "}}", v)
     (ROOT / "404.html").write_text(out, encoding="utf-8")

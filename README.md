@@ -44,8 +44,10 @@ tools/            process_media.py (procesa fotos/logos/video desde SharePoint) 
 - **Recurso gráfico:** las “barritas” en escalera del brochure (`.bars`) y el bloque del logo como marcador de eyebrows.
 - **Formulario:** sin backend. Arma el mensaje y lo abre en WhatsApp (+54 9 3413 16-5100) o en el mail (vmindustria_info@somoszlt.com).
 - **Indexación:** `"indexable": false` en `content.json` → `noindex` + `robots.txt` que bloquea. Cambiar a `true` el día de la mudanza del dominio (hoy vacamuertaindustria.com está en Wix).
-- **Video hero:** el último editado (01-ZLT Parque Industrial, sept. 2026), 16:9 en escritorio y 9:16 en celular, muteado con botón de sonido. Se mantienen los fps de origen.
-- **Mapa:** esquema propio en SVG (posiciones reales, distancias por ruta del brochure) + botón “Cómo llegar” a Google Maps. Sin tiles de terceros con licencia.
+- **Video hero:** el último editado (01-ZLT Parque Industrial, sept. 2026), en HD: 1920×1080 en escritorio y 1080×1920 (vertical) en celular, muteado con botón de sonido. Se mantienen los fps de origen.
+- **Video vertical en celular:** se usa el Short de YouTube (`site.hero_video.mobile_youtube` en `content.json`, hoy `TzOKC7Exa34`) embebido como fondo, sin sonido y en loop. Si YouTube no arranca en 9 s, se usa el MP4 vertical de `videos/`. En computadora, siempre el MP4 16:9.
+- **Mapa de Ubicación:** Google Maps embebido (vista satelital) con el pin en el parque (`site.park_geo`); "Cómo llegar" abre la ruta en Google Maps hasta ese punto.
+- **Pantalla de carga:** fondo crema, logo del parque que "respira" y una línea con el avance real. Se va cuando la página cargó y el video del encabezado (el de esa pantalla) está descargado completo, así arranca en HD sin cortes. Si la red se corta y pasan 25 s sin avance, se muestra la web igual. Las vistas previas (`preview/`) usan una copia liviana del video; la web publicada usa los HD.
 - **Estructura pensada para durar:** el Service Center es una sección de la home (`#proxima-etapa`), no una página: cuando se termine esa etapa se reescribe o se quita la sección sin romper URLs. No hay página de prensa; la home muestra las últimas 6 notas (lista completa en `links/notas-de-prensa.csv`).
 - **Fotos de prensa:** cada nota usa la misma foto que ZLT-WEB-V2 (Novedades), servida desde el Wix de ZLT (`static.wixstatic.com`, campo `img` de cada nota en `content.json`: `mediaId|nombre`). Si una no carga, la tarjeta muestra el fondo navy con el logo. Si algún día se da de baja el Wix de ZLT, hay que bajar esas fotos a `fotos/prensa/`.
 - **Masterplan interactivo:** los 103 lotes se pintan por tipología (1.350 · 2.166 · 2.566 · 3.155 · más de 4.000 m² · macrolote · otras medidas) y al pasar el mouse (o tocar, en celular) muestran lote, superficie, medidas, FOS y FOT (índice y m²). Los datos están en `lotes.json` (superficie, frente y fondo de la lista de precios del 16/12/2025, **sin precios**; el campo `fuente` indica el origen de cada lote). Los polígonos se trazaron sobre la imagen del masterplan (1919 px): si cambia esa imagen, hay que rehacerlos.
@@ -64,4 +66,6 @@ tools/            process_media.py (procesa fotos/logos/video desde SharePoint) 
 
 ## Publicación
 
-`.github/workflows/pages.yml` publica en GitHub Pages en cada push a `main` (mismo esquema que ZLT-WEB-V2, sin login: es una web pública). Si se quiere el mismo login de la V2 para la etapa de prueba, copiar `gate.js` de ese repo y agregar el `<script>` en `html/base.html`.
+`.github/workflows/pages.yml` publica en GitHub Pages en cada push a `main`.
+
+**Login (temporal):** `gate.js` es copia del de ZLT-WEB-V2 / ZLT-WEB-PRESENTACIONES, con los mismos usuarios y claves. Se carga en todas las páginas (`html/base.html`) y pide ingresar una vez por sesión del navegador. Es un login del lado del cliente: frena a quien entra por la URL, no a quien mire el repo. Para sacarlo el día de la mudanza: borrar la línea `<script src="{{rel}}gate.js"></script>` de `html/base.html`, correr `python3 build.py` y quitar `gate.js` del `cp` del workflow. Si cambian los usuarios en la web de presentaciones, copiar el archivo de nuevo.

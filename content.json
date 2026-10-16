@@ -13,7 +13,7 @@
       "es": "Ruta 17, km 5 · Añelo, Neuquén, Argentina",
       "en": "Route 17, km 5 · Añelo, Neuquén, Argentina"
     },
-    "maps_url": "https://www.google.com/maps/search/?api=1&query=Parque+Industrial+Vaca+Muerta+A%C3%B1elo+Neuqu%C3%A9n",
+    "maps_url": "https://www.google.com/maps/dir/?api=1&destination=-38.3488%2C-68.75906&destination_place_id=ChIJGyRd26hnC5YR90L2DLuk5Js",
     "brochure": {
       "es": "brochures/Brochure_Digital_PIVM_2026.pdf",
       "en": "brochures/Brochure_Digital_PIVM_2026.pdf",
@@ -69,11 +69,18 @@
       "desktop_poster": "videos/pivm-hero-16x9.jpg",
       "mobile": "videos/pivm-hero-9x16.mp4",
       "mobile_poster": "videos/pivm-hero-9x16.jpg",
-      "_fuente": "01-ZLT Parque Industrial (septiembre 2026) — Comunicación y Marketing/Fotos_y_Videos_Avance_De_Obra/2026/09"
+      "_fuente": "01-ZLT Parque Industrial (septiembre 2026) — Comunicación y Marketing/Fotos_y_Videos_Avance_De_Obra/2026/09",
+      "mobile_youtube": "TzOKC7Exa34",
+      "_mobile_youtube": "Short vertical del video oficial. En celular se usa este; si YouTube no responde, cae al MP4 vertical de videos/."
     },
     "legal": {
       "es": "La información, imágenes, planos y equipamiento presentados en este sitio son ilustrativos y no constituyen oferta contractual. Las especificaciones, medidas y descripciones pueden modificarse sin previo aviso. Las imágenes, videos y renders son representaciones artísticas.",
       "en": "The information, images, plans and equipment shown on this site are illustrative and do not constitute a contractual offer. Specifications, measurements and descriptions may change without notice. Images, videos and renders are artistic representations."
+    },
+    "park_geo": {
+      "lat": -38.3488,
+      "lon": -68.75906,
+      "place_id": "ChIJGyRd26hnC5YR90L2DLuk5Js"
     }
   },
   "nav": [
@@ -641,8 +648,8 @@
           "en": "Añelo · Neuquén · Route 17, km 5"
         },
         "title": {
-          "es": "El parque industrial de Vaca Muerta",
-          "en": "The industrial park of Vaca Muerta"
+          "es": "Parque Industrial Vaca Muerta",
+          "en": "Parque Industrial Vaca Muerta"
         },
         "lead": {
           "es": "103 lotes escriturables, con posesión inmediata e infraestructura completa, en el corazón productivo del país.",

@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE = "http://127.0.0.1:8765/"
 PAGES = ["", "empresas/", "inversores/"]
 WIDTHS = [(1440, 900), (768, 1024), (390, 844)]
-EXTERNAL_OK = ("ytimg.com", "youtube", "fonts.g", "wixstatic.com", ".mp4")  # sin red, o Chromium de prueba sin H.264
+EXTERNAL_OK = ("ytimg.com", "youtube", "fonts.g", "wixstatic.com", ".mp4", "blob:", "google.", "gstatic.")  # sin red, o Chromium de prueba sin H.264
 SHOTS = "--shots" in sys.argv
 out = ROOT / "tools" / "_capturas"; out.mkdir(exist_ok=True)
 
@@ -39,6 +39,7 @@ with sync_playwright() as p:
             problems.append(f"{page_path or '/'}: <div> desbalanceado en sección {s}")
         for (w, h) in WIDTHS:
             ctx = b.new_context(viewport={"width": w, "height": h}, reduced_motion="reduce")
+            ctx.add_init_script("try{sessionStorage.setItem('zlt_gate_ok','1')}catch(e){}")  # saltea el login (gate.js)
             pg = ctx.new_page()
             errs = []
             pg.on("pageerror", lambda e: errs.append(f"JS: {e}"))
@@ -46,6 +47,7 @@ with sync_playwright() as p:
             pg.on("response", lambda r: errs.append(f"HTTP {r.status}: {r.url}") if r.status >= 400 else None)
             pg.on("requestfailed", lambda r: errs.append(f"falló: {r.url}") if not any(x in r.url for x in EXTERNAL_OK) else None)
             pg.goto(BASE + page_path, wait_until="networkidle")
+            pg.wait_for_function("!document.getElementById('pre') || document.body.classList.contains('ready')", timeout=60000)
             pg.add_style_tag(content="*{transition:none!important;animation:none!important}")
             pg.evaluate("document.querySelectorAll('[data-reveal]').forEach(e=>e.classList.add('revealed'))")
             # scroll completo para cargar lazy

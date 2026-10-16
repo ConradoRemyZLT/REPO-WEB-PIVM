@@ -27,7 +27,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p _site
-          cp index.html 404.html robots.txt sitemap.xml _site/
+          cp index.html 404.html robots.txt sitemap.xml gate.js _site/
           cp -r empresas inversores css js fonts fotos logos iconos brochures videos _site/
           rm -f _site/fotos/manifest.json
           # Chequeo: ninguna página quedó sin generar

@@ -13,4 +13,5 @@ Sitio estático multipágina generado por `build.py` desde `content.json`.
   No hay renta administrada. No publicar cifras de lotes/naves entregados u operativos.
 - Service Center = sección `#proxima-etapa` de la home (no página propia). Sin página de prensa.
 - Contacto: +54 9 3413 16-5100 · vmindustria_info@somoszlt.com.
+- Login temporal: `gate.js` (copia del de ZLT-WEB-V2, mismos usuarios). No modificarlo; si cambian los usuarios, copiarlo de nuevo.
 - El sitio está en `noindex` hasta la mudanza (`site.indexable` en `content.json`).

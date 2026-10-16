@@ -2,8 +2,10 @@
 <html lang="es" class="no-js">
 <head>
 <meta charset="utf-8">
+{{base}}<script>document.documentElement.className=document.documentElement.className.replace("no-js","js")</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{{title_es}}</title>
+<script src="{{rel}}gate.js"></script>
 <meta name="title-es" content="{{title_es}}">
 <meta name="title-en" content="{{title_en}}">
 <meta name="description" content="{{desc_es}}">
@@ -27,6 +29,7 @@
 {{jsonld}}
 </head>
 <body data-page="{{page}}">
+{{preloader}}
 <a class="skip" href="#main"><span class="l-es">Ir al contenido</span><span class="l-en">Skip to content</span></a>
 {{header}}
 <main id="main">
